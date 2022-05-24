@@ -1,0 +1,35 @@
+{
+  "name": "user-office-core-monorepo",
+  "description": "This is user office core project monorepo",
+  "version": "0.0.1",
+  "type": "commonjs",
+  "author": "SWAP",
+  "license": "ISC",
+  "scripts": {
+    "test": "concurrently \"npm run test:backend\" \"npm run test:frontend\"",
+    "test:backend": "cd apps/user-office-backend && npm run test",
+    "test:frontend": "cd apps/user-office-frontend-e2e && npm run cy:run",
+    "lint": "concurrently \"npm run lint:backend\" \"npm run lint:frontend\"",
+    "lint:backend": "cd apps/user-office-backend && npm run lint",
+    "lint:frontend": "cd apps/user-office-frontend && npm run lint",
+    "build": "concurrently \"npm run build:backend\" \"npm run build:frontend\"",
+    "build:backend": "cd apps/user-office-backend && npm run build",
+    "build:frontend": "cd apps/user-office-frontend && npm run build",
+    "install": "concurrently \"npm run install:backend\" \"npm run install:frontend\"",
+    "install:backend": "cd apps/user-office-backend && npm install",
+    "install:frontend": "cd apps/user-office-frontend && npm install",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd apps/user-office-backend && npm run dev",
+    "dev:frontend": "cd apps/user-office-frontend && npm run dev",
+    "generate:shared:types": "cd libs/shared-types && node scripts/generate-graphql-sdk.js"
+  },
+  "keywords": [
+    "duo",
+    "swap",
+    "user-office",
+    "monorepo"
+  ],
+  "dependencies": {
+    "concurrently": "^7.2.1"
+  }
+}

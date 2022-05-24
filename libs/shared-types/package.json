@@ -1,0 +1,18 @@
+{
+  "name": "@user-office-software-libs/shared-tyes",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "scripts": {
+    "clean": "rm -rf ./lib"
+  },
+  "dependencies": {
+    "@graphql-codegen/cli": "^2.6.2",
+    "@graphql-codegen/typescript": "^2.4.8",
+    "@graphql-codegen/typescript-graphql-request": "^4.4.5",
+    "@graphql-codegen/typescript-operations": "^2.3.5",
+    "graphql-request": "^3.7.0",
+    "typescript": "^4.6.4"
+  },
+  "author": "SWAP",
+  "license": "ISC"
+}
