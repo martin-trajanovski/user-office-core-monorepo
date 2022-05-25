@@ -246,17 +246,6 @@ jobs:
           cd "$GITHUB_WORKSPACE/.."
           git clone --depth 1 --branch "${{ needs.resolve_dep.outputs.FACTORY_TAG }}" https://github.com/UserOfficeProject/user-office-factory.git
 
-      - name: Setup base docker-compose
-        run: |
-          cd "$GITHUB_WORKSPACE/.."
-          cat > docker-compose.all.yml << EOF
-          version: "3.1"
-          services:
-            backend:
-              labels:
-                - "traefik.frontend.rule=PathPrefix:/api, /downloads, /files, /download, /uploads, /gateway, /graphql"
-          EOF
-
       - name: Run docker-compose
         env:
           SVC_ACC_TOKEN: ${{ secrets.SVC_ACC_TOKEN }}
@@ -277,12 +266,7 @@ jobs:
 
           export CYPRES_SPEC_PATTERN=${{ matrix.pattern }}
 
-          docker-compose --project-directory $PWD \
-            -f apps/user-office-backend/docker-compose.e2e.yml \
-            -f user-office-factory/docker-compose.e2e.yml \
-            -f apps/user-office-frontend/docker-compose.e2e.yml \
-            -f docker-compose.all.yml \
-            up --exit-code-from cypress
+          npm run dev
 
       - name: Upload cypres screenshots
         if: ${{ failure() }}
