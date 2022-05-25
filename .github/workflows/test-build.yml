@@ -11,7 +11,6 @@ jobs:
   resolve_dep:
     runs-on: ubuntu-latest
     outputs:
-      BE_TAG: ${{ steps.resolve_rep.outputs.BE_TAG }}
       FACTORY_TAG: ${{ steps.resolve_rep.outputs.FACTORY_TAG }}
 
     steps:
@@ -36,31 +35,20 @@ jobs:
             echo $found
           }
 
-          BE_TAGS=$(check_feature ${{ github.head_ref }} \
-            https://registry.hub.docker.com/v1/repositories/user-office-core-monorepo/tags \
-            https://api.github.com/repos/UserOfficeProject/user-office-core-monorepo/branches
-          )
           FACTORY_TAGS=$(check_feature ${{ github.head_ref }} \
             https://registry.hub.docker.com/v1/repositories/dmsc/duo-factory/tags \
             https://api.github.com/repos/UserOfficeProject/user-office-factory/branches
           )
-
-          BE_TAG=develop
-          if [[ $BE_TAGS == "2" ]]; then
-            BE_TAG="${{ github.head_ref }}"
-          fi
 
           FACTORY_TAG=develop
           if [[ $FACTORY_TAGS == "2" ]]; then
             FACTORY_TAG="${{ github.head_ref }}"
           fi
 
-          echo ::set-output name=BE_TAG::${BE_TAG}
           echo ::set-output name=FACTORY_TAG::${FACTORY_TAG}
 
       - name: Resolved
         run: |
-          echo "BE_TAG: ${{ steps.resolve_rep.outputs.BE_TAG }}"
           echo "FACTORY_TAG: ${{ steps.resolve_rep.outputs.FACTORY_TAG }}"
 
   build:
@@ -86,11 +74,6 @@ jobs:
       - name: Install dependencies
         if: steps.cached-modules.outputs.cache-hit != 'true'
         run: npm ci --production --loglevel error --no-fund
-
-      - name: Download required repositories
-        run: |
-          cd "$GITHUB_WORKSPACE/.."
-          git clone --depth 1 --branch "${{ needs.resolve_dep.outputs.BE_TAG }}" https://github.com/UserOfficeProject/user-office-backend.git
 
       - name: Setup base docker-compose
         run: |
@@ -120,8 +103,7 @@ jobs:
 
           REPO_DIR_NAME=$(basename $GITHUB_WORKSPACE)
 
-          export USER_OFFICE_BACKEND_TAG=${{ needs.resolve_dep.outputs.BE_TAG }}
-          export USER_OFFICE_BACKEND_DIR=user-office-backend
+          export USER_OFFICE_BACKEND_DIR=apps/user-office-backend
           export USER_OFFICE_BACKEND=http://backend:4000/graphql
           export USER_OFFICE_ENDPOINT=$USER_OFFICE_BACKEND
 
@@ -288,7 +270,6 @@ jobs:
       - name: Download required repositories
         run: |
           cd "$GITHUB_WORKSPACE/.."
-          git clone --depth 1 --branch "${{ needs.resolve_dep.outputs.BE_TAG }}" https://github.com/UserOfficeProject/user-office-backend.git
           git clone --depth 1 --branch "${{ needs.resolve_dep.outputs.FACTORY_TAG }}" https://github.com/UserOfficeProject/user-office-factory.git
 
       - name: Setup base docker-compose
@@ -310,8 +291,7 @@ jobs:
 
           REPO_DIR_NAME=$(basename $GITHUB_WORKSPACE)
 
-          export USER_OFFICE_BACKEND_TAG=${{ needs.resolve_dep.outputs.BE_TAG }}
-          export USER_OFFICE_BACKEND_DIR=user-office-backend
+          export USER_OFFICE_BACKEND_DIR=apps/user-office-backend
           export USER_OFFICE_BACKEND=http://backend:4000/graphql
           export USER_OFFICE_ENDPOINT=$USER_OFFICE_BACKEND
 
@@ -324,9 +304,9 @@ jobs:
           export CYPRES_SPEC_PATTERN=${{ matrix.pattern }}
 
           docker-compose --project-directory $PWD \
-            -f user-office-backend/docker-compose.e2e.yml \
+            -f apps/user-office-backend/docker-compose.e2e.yml \
             -f user-office-factory/docker-compose.e2e.yml \
-            -f "$REPO_DIR_NAME/docker-compose.e2e.yml" \
+            -f apps/user-office-frontend/docker-compose.e2e.yml \
             -f docker-compose.all.yml \
             up --exit-code-from cypress
 
