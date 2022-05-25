@@ -4,7 +4,7 @@ name: E2E and build testing.
 # events but only for the develop and master branches
 on:
   pull_request:
-    branches: [develop, master]
+    branches: [main]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -37,8 +37,8 @@ jobs:
           }
 
           BE_TAGS=$(check_feature ${{ github.head_ref }} \
-            https://registry.hub.docker.com/v1/repositories/dmsc/duo-backend/tags \
-            https://api.github.com/repos/UserOfficeProject/user-office-backend/branches
+            https://registry.hub.docker.com/v1/repositories/user-office-core-monorepo/tags \
+            https://api.github.com/repos/UserOfficeProject/user-office-core-monorepo/branches
           )
           FACTORY_TAGS=$(check_feature ${{ github.head_ref }} \
             https://registry.hub.docker.com/v1/repositories/dmsc/duo-factory/tags \
@@ -153,15 +153,15 @@ jobs:
 
           cd $GITHUB_WORKSPACE
 
-          sed -i 's/\r$//' src/generated/sdk.ts  # make sure we don't fail because of line ending differences (CRLF / LF)
-          GIT_TRACKED_SUM=$(sha256sum src/generated/sdk.ts)
-          cp src/generated/sdk.ts /tmp/sdk_git_tracked.ts
+          sed -i 's/\r$//' libs/shared-types/src/index.ts  # make sure we don't fail because of line ending differences (CRLF / LF)
+          GIT_TRACKED_SUM=$(sha256sum libs/shared-types/src/index.ts)
+          cp libs/shared-types/src/index.ts /tmp/sdk_git_tracked.ts
 
-          npm run generate:local
+          npm run generate:shared:types
 
-          sed -i 's/\r$//' src/generated/sdk.ts  # make sure we don't fail because of line ending differences (CRLF / LF)
-          PIPELINE_GENERATED_SUM=$(sha256sum src/generated/sdk.ts)
-          cp src/generated/sdk.ts /tmp/sdk_pipeline_generated.ts
+          sed -i 's/\r$//' libs/shared-types/src/index.ts  # make sure we don't fail because of line ending differences (CRLF / LF)
+          PIPELINE_GENERATED_SUM=$(sha256sum libs/shared-types/src/index.ts)
+          cp libs/shared-types/src/index.ts /tmp/sdk_pipeline_generated.ts
 
           # for debugging
           echo -e "GIT_TRACKED_SUM:\t$GIT_TRACKED_SUM"
@@ -200,7 +200,7 @@ jobs:
         if: steps.cached-image.outputs.cache-hit != 'true'
         run: |
           mkdir -p /tmp/.buildx-image-cache
-          TAG=duo-frontend:${{ github.sha }}
+          TAG=user-office-core-monorepo:${{ github.sha }}
 
           docker buildx build --cache-to="type=local,dest=/tmp/.buildx-layer-cache,mode=max" --cache-from="type=local,src=/tmp/.buildx-layer-cache" -t $TAG -o type=docker,dest=- . > /tmp/.buildx-image-cache/img.tar
 
@@ -221,10 +221,10 @@ jobs:
 
       - name: Build new e2e test image if changed
         run: |
-          DOCKERFILE_VERSION=${{ hashFiles('Dockerfile.e2e', 'cypress/*.json') }}
-          MANIFEST_URL="https://docker.pkg.github.com/v2/userofficeproject/user-office-frontend/e2e-cypress-core/manifests/$DOCKERFILE_VERSION"
+          DOCKERFILE_VERSION=${{ hashFiles('Dockerfile.e2e', 'apps/user-office-frontend-e2e/*.json') }}
+          MANIFEST_URL="https://docker.pkg.github.com/v2/userofficeproject/user-office-core-monorepo/e2e-cypress-core/manifests/$DOCKERFILE_VERSION"
           MANIFEST_STATUS=$(curl -H 'Authorization: token ${{ secrets.GITHUB_TOKEN }}' -o /dev/null --silent --get --write-out '%{http_code}' $MANIFEST_URL)
-          TAG="docker.pkg.github.com/userofficeproject/user-office-frontend/e2e-cypress-core:$DOCKERFILE_VERSION"
+          TAG="docker.pkg.github.com/userofficeproject/user-office-core-monorepo/e2e-cypress-core:$DOCKERFILE_VERSION"
 
           echo MANIFEST_STATUS $MANIFEST_STATUS
 
@@ -241,12 +241,12 @@ jobs:
       matrix:
         pattern:
           [
-            "cypress/integration/[a-e]*.ts",
-            "cypress/integration/[f-i]*.ts",
-            "cypress/integration/[j-p]*.ts",
-            "cypress/integration/[r-s]*.ts",
-            "cypress/integration/[t-z]*.ts",
-            "cypress/integration/[A-Z]*.ts",
+            'apps/user-office-frontend-e2e/cypress/integration/[a-e]*.ts',
+            'apps/user-office-frontend-e2e/cypress/integration/[f-i]*.ts',
+            'apps/user-office-frontend-e2e/cypress/integration/[j-p]*.ts',
+            'apps/user-office-frontend-e2e/cypress/integration/[r-s]*.ts',
+            'apps/user-office-frontend-e2e/cypress/integration/[t-z]*.ts',
+            'apps/user-office-frontend-e2e/cypress/integration/[A-Z]*.ts',
           ]
 
     steps:
@@ -261,8 +261,8 @@ jobs:
 
       - name: Pull cypress image
         run: |
-          DOCKERFILE_VERSION=${{ hashFiles('Dockerfile.e2e', 'cypress/*.json') }}
-          TAG="docker.pkg.github.com/userofficeproject/user-office-frontend/e2e-cypress-core:$DOCKERFILE_VERSION"
+          DOCKERFILE_VERSION=${{ hashFiles('Dockerfile.e2e', 'apps/user-office-frontend-e2e/*.json') }}
+          TAG="docker.pkg.github.com/userofficeproject/user-office-frontend/e2e-cypress-core-monorepo:$DOCKERFILE_VERSION"
           docker pull $TAG 
           docker tag $TAG e2e-cypress:latest
 
@@ -374,5 +374,5 @@ jobs:
 
       - name: Push
         run: |
-          docker tag duo-frontend:${{ github.sha }} dmsc/duo-frontend:${{ github.head_ref }}
-          docker push dmsc/duo-frontend:${{ github.head_ref }}
+          docker tag user-office-core-monorepo:${{ github.sha }} dmsc/user-office-core-monorepo:${{ github.head_ref }}
+          docker push dmsc/user-office-core-monorepo:${{ github.head_ref }}

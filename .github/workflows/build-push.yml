@@ -4,7 +4,7 @@ name: Build && Push
 # events but only for the develop branch
 on:
   push:
-    branches: [develop, master]
+    branches: [main]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -43,7 +43,6 @@ jobs:
 
       # Avoid build and push only for 'master' branch because for 'master' we have another action that builds release image
       - name: Build and push
-        if: steps.extract_branch.outputs.branch != 'master'
         id: docker_build
         uses: docker/build-push-action@v2
         with:
