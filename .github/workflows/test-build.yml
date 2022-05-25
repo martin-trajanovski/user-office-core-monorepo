@@ -72,9 +72,8 @@ jobs:
             ${{ runner.os }}-${{ env.cache-name }}-
 
       - name: Generate and compare SDK
-        run: |
-          npm ci --production --loglevel error --no-fund
-
+      - run: npm ci --production --loglevel error --no-fund
+      - run: |
           REPO_DIR_NAME=$(basename $GITHUB_WORKSPACE)
 
           export USER_OFFICE_BACKEND_DIR=apps/user-office-backend
@@ -84,9 +83,10 @@ jobs:
           export USER_OFFICE_FACTORY_ENDPOINT=noop
           export SCHEMA_URL=http://localhost:4000/graphql
 
-          npm run dev
+      - run: npm run dev
 
-          while true; do
+      - run: |
+            while true; do
             STATUS=$(curl \
               -o /dev/stderr \
               --silent \
