@@ -30,6 +30,7 @@
     "monorepo"
   ],
   "dependencies": {
-    "concurrently": "^7.2.1"
+    "concurrently": "^7.2.1",
+    "dotenv": "^14.3.2"
   }
 }
