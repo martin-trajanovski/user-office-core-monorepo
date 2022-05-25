@@ -4,7 +4,6 @@ import {
   CreateApiAccessTokenMutationVariables,
   getSdk,
 } from '@user-office-software-libs/shared-types';
-
 import { GraphQLClient } from 'graphql-request';
 
 import initialDBData from './initialDBData';
