@@ -18,6 +18,11 @@ import Collapse from '@mui/material/Collapse';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
+import {
+  Call,
+  FeatureId,
+  UserRole,
+} from '@user-office-software-libs/shared-types';
 import React, { useContext, useState } from 'react';
 import { useHistory } from 'react-router';
 import { NavLink } from 'react-router-dom';
@@ -27,7 +32,6 @@ import Tooltip from 'components/common/MenuTooltip';
 import { getRelativeDatesFromToday } from 'components/experiment/DateFilter';
 import { TimeSpan } from 'components/experiment/PresetDateSelector';
 import { FeatureContext } from 'context/FeatureContextProvider';
-import { Call, FeatureId, UserRole } from 'generated/sdk';
 
 import BoxIcon from '../common/icons/BoxIcon';
 import CommentQuestionIcon from '../common/icons/CommentQuestionIcon';

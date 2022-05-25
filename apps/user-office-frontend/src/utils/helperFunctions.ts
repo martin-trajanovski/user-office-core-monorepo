@@ -1,11 +1,15 @@
 import { Column } from '@material-table/core';
 import {
+  Proposal,
+  ProposalEndStatus,
+  ProposalStatus,
+} from '@user-office-software-libs/shared-types';
+import {
   getTranslation,
   ResourceId,
 } from '@user-office-software/duo-localisation';
 
 import { SortDirectionType } from 'components/common/SuperMaterialTable';
-import { Proposal, ProposalEndStatus, ProposalStatus } from 'generated/sdk';
 import { ProposalViewData } from 'hooks/proposal/useProposalsCoreData';
 
 import {

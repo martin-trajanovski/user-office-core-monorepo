@@ -4,11 +4,14 @@ import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import Typography from '@mui/material/Typography';
 import makeStyles from '@mui/styles/makeStyles';
+import {
+  TechnicalReview,
+  UserRole,
+} from '@user-office-software-libs/shared-types';
 import { getTranslation } from '@user-office-software/duo-localisation';
 import React, { Fragment } from 'react';
 
 import { useCheckAccess } from 'components/common/Can';
-import { TechnicalReview, UserRole } from 'generated/sdk';
 import { getFullUserName } from 'utils/user';
 
 type TechnicalReviewInformationProps = {

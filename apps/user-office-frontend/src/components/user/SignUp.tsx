@@ -15,6 +15,12 @@ import MenuItem from '@mui/material/MenuItem';
 import useTheme from '@mui/material/styles/useTheme';
 import Typography from '@mui/material/Typography';
 import makeStyles from '@mui/styles/makeStyles';
+import {
+  PageName,
+  CreateUserMutationVariables,
+  SettingsId,
+  Maybe,
+} from '@user-office-software-libs/shared-types';
 import { createUserValidationSchema } from '@user-office-software/duo-validation';
 import clsx from 'clsx';
 import { Field, Form, Formik } from 'formik';
@@ -32,12 +38,6 @@ import FormikUIAutocomplete from 'components/common/FormikUIAutocomplete';
 import UOLoader from 'components/common/UOLoader';
 import InformationModal from 'components/pages/InformationModal';
 import { UserContext } from 'context/UserContextProvider';
-import {
-  PageName,
-  CreateUserMutationVariables,
-  SettingsId,
-  Maybe,
-} from 'generated/sdk';
 import { useFormattedDateTime } from 'hooks/admin/useFormattedDateTime';
 import { useGetPageContent } from 'hooks/admin/useGetPageContent';
 import { useInstitutionsData } from 'hooks/admin/useInstitutionData';

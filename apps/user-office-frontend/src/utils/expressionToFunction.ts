@@ -1,4 +1,4 @@
-import { Unit } from './../generated/sdk';
+import { Unit } from '@user-office-software-libs/shared-types';
 const expressionToFunction = (expression: string) =>
   new Function('x', `return ${expression}`);
 

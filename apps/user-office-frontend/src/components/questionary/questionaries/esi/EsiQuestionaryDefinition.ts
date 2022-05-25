@@ -1,8 +1,9 @@
+import { Sdk, TemplateGroupId } from '@user-office-software-libs/shared-types';
+
 import ProposalEsiReview from 'components/proposalEsi/ProposalEsiReview';
 import { DefaultReviewWizardStep } from 'components/questionary/DefaultReviewWizardStep';
 import { DefaultStepDisplayElementFactory } from 'components/questionary/DefaultStepDisplayElementFactory';
 import { DefaultWizardStepFactory } from 'components/questionary/DefaultWizardStepFactory';
-import { Sdk, TemplateGroupId } from 'generated/sdk';
 import { ProposalEsiSubmissionState } from 'models/questionary/proposalEsi/ProposalEsiSubmissionState';
 import { ItemWithQuestionary } from 'models/questionary/QuestionarySubmissionState';
 

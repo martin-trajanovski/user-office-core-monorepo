@@ -1,5 +1,6 @@
+import { FeedbackStatus } from '@user-office-software-libs/shared-types';
+
 import { QuestionaryWizardStep } from 'components/questionary/DefaultWizardStepFactory';
-import { FeedbackStatus } from 'generated/sdk';
 import { FeedbackSubmissionState } from 'models/questionary/feedback/FeedbackSubmissionState';
 import { QuestionarySubmissionState } from 'models/questionary/QuestionarySubmissionState';
 

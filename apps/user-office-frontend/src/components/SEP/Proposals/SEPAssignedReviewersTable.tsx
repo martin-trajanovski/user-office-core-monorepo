@@ -2,6 +2,12 @@ import MaterialTable from '@material-table/core';
 import RateReviewIcon from '@mui/icons-material/RateReview';
 import Visibility from '@mui/icons-material/Visibility';
 import makeStyles from '@mui/styles/makeStyles';
+import {
+  SepAssignment,
+  ReviewStatus,
+  UserRole,
+  SettingsId,
+} from '@user-office-software-libs/shared-types';
 import PropTypes from 'prop-types';
 import React, { useContext } from 'react';
 import { NumberParam, useQueryParams } from 'use-query-params';
@@ -12,12 +18,6 @@ import ProposalReviewContent, {
 } from 'components/review/ProposalReviewContent';
 import ProposalReviewModal from 'components/review/ProposalReviewModal';
 import { ReviewAndAssignmentContext } from 'context/ReviewAndAssignmentContextProvider';
-import {
-  SepAssignment,
-  ReviewStatus,
-  UserRole,
-  SettingsId,
-} from 'generated/sdk';
 import { useFormattedDateTime } from 'hooks/admin/useFormattedDateTime';
 import { SEPProposalType } from 'hooks/SEP/useSEPProposalsData';
 import { tableIcons } from 'utils/materialIcons';

@@ -2,11 +2,11 @@ import MenuBookIcon from '@mui/icons-material/MenuBook';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
+import { PageName } from '@user-office-software-libs/shared-types';
 import parse from 'html-react-parser';
 import React from 'react';
 
 import UOLoader from 'components/common/UOLoader';
-import { PageName } from 'generated/sdk';
 import { useGetPageContent } from 'hooks/admin/useGetPageContent';
 import { StyledContainer } from 'styles/StyledComponents';
 

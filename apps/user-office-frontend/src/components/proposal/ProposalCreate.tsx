@@ -1,9 +1,13 @@
+import {
+  BasicUserDetails,
+  Call,
+  QuestionaryStep,
+} from '@user-office-software-libs/shared-types';
 import React, { useContext } from 'react';
 import { useParams } from 'react-router';
 
 import UOLoader from 'components/common/UOLoader';
 import { UserContext } from 'context/UserContextProvider';
-import { BasicUserDetails, Call, QuestionaryStep } from 'generated/sdk';
 import { useCallData } from 'hooks/call/useCallData';
 import { useBlankQuestionaryStepsData } from 'hooks/questionary/useBlankQuestionaryStepsData';
 import { useBasicUserData } from 'hooks/user/useUserData';

@@ -1,10 +1,10 @@
 import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
+import { DataType } from '@user-office-software-libs/shared-types';
 import { multipleChoiceValidationSchema } from '@user-office-software/duo-validation';
 import React from 'react';
 
 import defaultRenderer from 'components/questionary/DefaultQuestionRenderer';
 import MultipleChoiceSearchCriteriaComponent from 'components/questionary/questionaryComponents/MultipleChoice/MultipleChoiceSearchCriteriaComponent';
-import { DataType } from 'generated/sdk';
 
 import { QuestionaryComponentDefinition } from '../../QuestionaryComponentRegistry';
 import MultipleChoiceAnswerRenderer from './MultipleChoiceAnswerRenderer';

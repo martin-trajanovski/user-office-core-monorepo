@@ -16,6 +16,11 @@ import Stack from '@mui/material/Stack';
 import useTheme from '@mui/material/styles/useTheme';
 import Typography from '@mui/material/Typography';
 import makeStyles from '@mui/styles/makeStyles';
+import {
+  SettingsId,
+  UpdateUserMutationVariables,
+  UserRole,
+} from '@user-office-software-libs/shared-types';
 import { updateUserValidationSchema } from '@user-office-software/duo-validation';
 import { Field, Form, Formik } from 'formik';
 import { Select, TextField } from 'formik-mui';
@@ -27,11 +32,6 @@ import FormikUIAutocomplete from 'components/common/FormikUIAutocomplete';
 import ImpersonateButton from 'components/common/ImpersonateButton';
 import UOLoader from 'components/common/UOLoader';
 import { UserContext } from 'context/UserContextProvider';
-import {
-  SettingsId,
-  UpdateUserMutationVariables,
-  UserRole,
-} from 'generated/sdk';
 import { useFormattedDateTime } from 'hooks/admin/useFormattedDateTime';
 import { useInstitutionsData } from 'hooks/admin/useInstitutionData';
 import { useGetFields } from 'hooks/user/useGetFields';

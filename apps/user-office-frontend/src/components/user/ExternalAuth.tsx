@@ -1,9 +1,9 @@
+import { SettingsId } from '@user-office-software-libs/shared-types';
 import React, { useContext, useEffect, useRef } from 'react';
 import { StringParam, useQueryParams } from 'use-query-params';
 
 import { SettingsContext } from 'context/SettingsContextProvider';
 import { UserContext } from 'context/UserContextProvider';
-import { SettingsId } from 'generated/sdk';
 import { useUnauthorizedApi } from 'hooks/common/useDataApi';
 
 const ExternalAuthQueryParams = {

@@ -1,4 +1,9 @@
 import makeStyles from '@mui/styles/makeStyles';
+import {
+  Answer,
+  QuestionaryStep,
+  Sdk,
+} from '@user-office-software-libs/shared-types';
 import { Formik, useFormikContext } from 'formik';
 import React, { useContext, useEffect, useState } from 'react';
 import { Prompt } from 'react-router';
@@ -7,7 +12,6 @@ import * as Yup from 'yup';
 import { ErrorFocus } from 'components/common/ErrorFocus';
 import { NavigButton } from 'components/common/NavigButton';
 import UOLoader from 'components/common/UOLoader';
-import { Answer, QuestionaryStep, Sdk } from 'generated/sdk';
 import { usePreSubmitActions } from 'hooks/questionary/useSubmitActions';
 import {
   areDependenciesSatisfied,

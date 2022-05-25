@@ -1,10 +1,10 @@
 import { TableProps } from '@mui/material';
+import { BasicUserDetails } from '@user-office-software-libs/shared-types';
 import React, { FunctionComponent } from 'react';
 
 import UOLoader from 'components/common/UOLoader';
 import ProposalQuestionaryDetails from 'components/proposal/ProposalQuestionaryDetails';
 import { TableRowData } from 'components/questionary/QuestionaryDetails';
-import { BasicUserDetails } from 'generated/sdk';
 import { ProposalWithQuestionary } from 'models/questionary/proposal/ProposalWithQuestionary';
 import { getFullUserName } from 'utils/user';
 

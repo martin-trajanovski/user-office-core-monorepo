@@ -1,7 +1,10 @@
+import {
+  Proposal,
+  ProposalsFilter,
+} from '@user-office-software-libs/shared-types';
 import { useContext, useEffect, useState } from 'react';
 
 import { UserContext } from 'context/UserContextProvider';
-import { Proposal, ProposalsFilter } from 'generated/sdk';
 import { useDataApi } from 'hooks/common/useDataApi';
 
 export function useProposalsData(filter: ProposalsFilter) {

@@ -5,11 +5,11 @@ import {
   responsiveFontSizes,
   useTheme,
 } from '@mui/material/styles';
+import { SettingsId } from '@user-office-software-libs/shared-types';
 import React, { useCallback, useContext } from 'react';
 import { useEffect } from 'react';
 
 import { SettingsContext } from 'context/SettingsContextProvider';
-import { SettingsId } from 'generated/sdk';
 
 // NOTE: This comes from: https://mui.com/guides/migration-v4/#types-property-quot-palette-quot-quot-spacing-quot-does-not-exist-on-type-defaulttheme
 declare module '@mui/styles/defaultTheme' {

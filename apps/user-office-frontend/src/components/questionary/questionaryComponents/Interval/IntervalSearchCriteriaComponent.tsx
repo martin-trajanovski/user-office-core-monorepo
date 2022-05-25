@@ -6,14 +6,14 @@ import {
   Select,
   TextField,
 } from '@mui/material';
-import React, { useState } from 'react';
-
-import { SearchCriteriaInputProps } from 'components/proposal/SearchCriteriaInputProps';
 import {
   IntervalConfig,
   QuestionFilterCompareOperator,
   Unit,
-} from 'generated/sdk';
+} from '@user-office-software-libs/shared-types';
+import React, { useState } from 'react';
+
+import { SearchCriteriaInputProps } from 'components/proposal/SearchCriteriaInputProps';
 import { convertToSi } from 'utils/expressionToFunction';
 
 function IntervalSearchCriteriaComponent({

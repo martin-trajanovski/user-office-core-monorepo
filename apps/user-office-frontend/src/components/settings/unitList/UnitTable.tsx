@@ -2,6 +2,11 @@ import PublishIcon from '@mui/icons-material/Publish';
 import ShareIcon from '@mui/icons-material/Share';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import {
+  UserRole,
+  Unit,
+  SettingsId,
+} from '@user-office-software-libs/shared-types';
 import React from 'react';
 import { useHistory } from 'react-router';
 import { useQueryParams } from 'use-query-params';
@@ -11,7 +16,6 @@ import SuperMaterialTable, {
   DefaultQueryParams,
   UrlQueryParamsType,
 } from 'components/common/SuperMaterialTable';
-import { UserRole, Unit, SettingsId } from 'generated/sdk';
 import { useFormattedDateTime } from 'hooks/admin/useFormattedDateTime';
 import { useUnitsData } from 'hooks/settings/useUnitData';
 import { downloadBlob } from 'utils/downloadBlob';

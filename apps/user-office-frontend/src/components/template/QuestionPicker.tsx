@@ -15,6 +15,14 @@ import Typography from '@mui/material/Typography';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import makeStyles from '@mui/styles/makeStyles';
 import useTheme from '@mui/styles/useTheme';
+import {
+  DataType,
+  DependenciesLogicOperator,
+  Question,
+  Template,
+  TemplateGroupId,
+  Topic,
+} from '@user-office-software-libs/shared-types';
 import clsx from 'clsx';
 import React, { useState } from 'react';
 import { Droppable } from 'react-beautiful-dnd';
@@ -24,14 +32,6 @@ import {
   getQuestionaryComponentDefinitions,
   getTemplateFieldIcon,
 } from 'components/questionary/QuestionaryComponentRegistry';
-import {
-  DataType,
-  DependenciesLogicOperator,
-  Question,
-  Template,
-  TemplateGroupId,
-  Topic,
-} from 'generated/sdk';
 import { Event, EventType } from 'models/questionary/QuestionaryEditorModel';
 
 import QuestionPickerFilter from './QuestionPickerFilter';

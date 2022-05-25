@@ -1,9 +1,12 @@
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import {
+  DataType,
+  IntervalConfig,
+} from '@user-office-software-libs/shared-types';
 import { intervalQuestionValidationSchema } from '@user-office-software/duo-validation';
 import React from 'react';
 
 import defaultRenderer from 'components/questionary/DefaultQuestionRenderer';
-import { DataType, IntervalConfig } from 'generated/sdk';
 
 import { QuestionaryComponentDefinition } from '../../QuestionaryComponentRegistry';
 import { IntervalAnswerRenderer } from './IntervalAnswerRenderer';

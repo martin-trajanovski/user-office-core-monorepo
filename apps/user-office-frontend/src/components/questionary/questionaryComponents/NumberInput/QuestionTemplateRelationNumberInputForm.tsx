@@ -1,5 +1,9 @@
 import Autocomplete from '@mui/lab/Autocomplete';
 import MaterialTextField from '@mui/material/TextField';
+import {
+  NumberInputConfig,
+  NumberValueConstraint,
+} from '@user-office-software-libs/shared-types';
 import { Field, getIn } from 'formik';
 import { CheckboxWithLabel, TextField } from 'formik-mui';
 import React, { FC, useState } from 'react';
@@ -9,7 +13,6 @@ import FormikUIAutocomplete from 'components/common/FormikUIAutocomplete';
 import TitledContainer from 'components/common/TitledContainer';
 import { QuestionTemplateRelationFormProps } from 'components/questionary/QuestionaryComponentRegistry';
 import { QuestionExcerpt } from 'components/questionary/questionaryComponents/QuestionExcerpt';
-import { NumberInputConfig, NumberValueConstraint } from 'generated/sdk';
 import { useUnitsData } from 'hooks/settings/useUnitData';
 
 import QuestionDependencyList from '../QuestionDependencyList';

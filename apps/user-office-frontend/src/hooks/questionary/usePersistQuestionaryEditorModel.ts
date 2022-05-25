@@ -1,12 +1,12 @@
-import { useState } from 'react';
-
 import {
   DataType,
   QuestionTemplateRelation,
   Rejection,
   Template,
   TemplateCategoryId,
-} from 'generated/sdk';
+} from '@user-office-software-libs/shared-types';
+import { useState } from 'react';
+
 import { Event, EventType } from 'models/questionary/QuestionaryEditorModel';
 import useDataApiWithFeedback from 'utils/useDataApiWithFeedback';
 import { MiddlewareInputParams } from 'utils/useReducerWithMiddleWares';

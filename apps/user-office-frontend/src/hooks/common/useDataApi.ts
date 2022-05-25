@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { getSdk, SettingsId } from '@user-office-software-libs/shared-types';
 import { GraphQLClient } from 'graphql-request';
 import { Variables } from 'graphql-request/dist/types';
 import jwtDecode from 'jwt-decode';
@@ -7,7 +8,6 @@ import { useCallback, useContext } from 'react';
 
 import { SettingsContext } from 'context/SettingsContextProvider';
 import { UserContext } from 'context/UserContextProvider';
-import { getSdk, SettingsId } from 'generated/sdk';
 
 const endpoint = '/graphql';
 

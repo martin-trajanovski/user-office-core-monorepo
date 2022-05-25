@@ -1,11 +1,11 @@
 import MaterialTable from '@material-table/core';
 import { Typography } from '@mui/material';
 import Button from '@mui/material/Button';
+import { Role } from '@user-office-software-libs/shared-types';
 import React, { useContext, useState } from 'react';
 
 import { ActionButtonContainer } from 'components/common/ActionButtonContainer';
 import { UserContext } from 'context/UserContextProvider';
-import { Role } from 'generated/sdk';
 import { useRenewToken } from 'hooks/common/useRenewToken';
 import { useUserWithRolesData } from 'hooks/user/useUserWithRoles';
 import { tableIcons } from 'utils/materialIcons';

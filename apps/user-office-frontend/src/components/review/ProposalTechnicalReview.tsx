@@ -6,6 +6,12 @@ import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
 import makeStyles from '@mui/styles/makeStyles';
 import { Editor } from '@tinymce/tinymce-react';
+import {
+  TechnicalReviewStatus,
+  CoreTechnicalReviewFragment,
+  UserRole,
+  Proposal,
+} from '@user-office-software-libs/shared-types';
 import { proposalTechnicalReviewValidationSchema } from '@user-office-software/duo-validation/lib/Review';
 import { Formik, Form, Field, useFormikContext } from 'formik';
 import { CheckboxWithLabel, Select, TextField } from 'formik-mui';
@@ -18,12 +24,6 @@ import {
   FileUploadComponent,
 } from 'components/common/FileUploadComponent';
 import { UserContext } from 'context/UserContextProvider';
-import {
-  TechnicalReviewStatus,
-  CoreTechnicalReviewFragment,
-  UserRole,
-  Proposal,
-} from 'generated/sdk';
 import { StyledButtonContainer } from 'styles/StyledComponents';
 import useDataApiWithFeedback from 'utils/useDataApiWithFeedback';
 import { getFullUserName } from 'utils/user';

@@ -3,12 +3,12 @@ import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import makeStyles from '@mui/styles/makeStyles';
+import { Institution } from '@user-office-software-libs/shared-types';
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router';
 
 import { ActionButtonContainer } from 'components/common/ActionButtonContainer';
 import UOLoader from 'components/common/UOLoader';
-import { Institution } from 'generated/sdk';
 import { useInstitutionsData } from 'hooks/admin/useInstitutionData';
 import { StyledContainer, StyledPaper } from 'styles/StyledComponents';
 import useDataApiWithFeedback from 'utils/useDataApiWithFeedback';

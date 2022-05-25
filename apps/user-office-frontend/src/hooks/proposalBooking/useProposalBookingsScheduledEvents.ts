@@ -1,6 +1,3 @@
-import { DateTime } from 'luxon';
-import { useEffect, useState } from 'react';
-
 import {
   BasicUserDetailsFragment,
   EsiFragment,
@@ -13,7 +10,10 @@ import {
   ShipmentFragment,
   Visit,
   VisitFragment,
-} from 'generated/sdk';
+} from '@user-office-software-libs/shared-types';
+import { DateTime } from 'luxon';
+import { useEffect, useState } from 'react';
+
 import { useDataApi } from 'hooks/common/useDataApi';
 import { VisitRegistrationCore } from 'models/questionary/visit/VisitRegistrationCore';
 

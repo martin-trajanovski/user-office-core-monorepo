@@ -1,3 +1,4 @@
+import { ProposalsFilter } from '@user-office-software-libs/shared-types';
 import React from 'react';
 import {
   NumberParam,
@@ -10,7 +11,6 @@ import {
   DefaultQueryParams,
   UrlQueryParamsType,
 } from 'components/common/SuperMaterialTable';
-import { ProposalsFilter } from 'generated/sdk';
 import { useCallsData } from 'hooks/call/useCallsData';
 import { useInstrumentsData } from 'hooks/instrument/useInstrumentsData';
 import { useProposalStatusesData } from 'hooks/settings/useProposalStatusesData';

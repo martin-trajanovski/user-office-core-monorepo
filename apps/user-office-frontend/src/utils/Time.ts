@@ -1,6 +1,5 @@
+import { DateConfig, Scalars } from '@user-office-software-libs/shared-types';
 import { DateTime } from 'luxon';
-
-import { DateConfig, Scalars } from 'generated/sdk';
 
 function paddZero(num: number): string {
   if (num < 10) {

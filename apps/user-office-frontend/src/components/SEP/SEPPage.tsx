@@ -1,3 +1,4 @@
+import { Sep, UserRole } from '@user-office-software-libs/shared-types';
 import React from 'react';
 import { useParams } from 'react-router';
 
@@ -5,7 +6,6 @@ import { useCheckAccess } from 'components/common/Can';
 import SimpleTabs from 'components/common/TabPanel';
 import UOLoader from 'components/common/UOLoader';
 import EventLogList from 'components/eventLog/EventLogList';
-import { Sep, UserRole } from 'generated/sdk';
 import { useSEPData } from 'hooks/SEP/useSEPData';
 import { StyledContainer, StyledPaper } from 'styles/StyledComponents';
 

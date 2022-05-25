@@ -3,12 +3,12 @@ import FormHelperText from '@mui/material/FormHelperText';
 import FormLabel from '@mui/material/FormLabel';
 import makeStyles from '@mui/styles/makeStyles';
 import { Editor } from '@tinymce/tinymce-react';
+import { RichTextInputConfig } from '@user-office-software-libs/shared-types';
 import { getIn } from 'formik';
 import React, { useState } from 'react';
 import { Editor as TinyMCEEditor } from 'tinymce';
 
 import { BasicComponentProps } from 'components/proposal/IBasicComponentProps';
-import { RichTextInputConfig } from 'generated/sdk';
 
 const useStyles = makeStyles((theme) => ({
   label: {

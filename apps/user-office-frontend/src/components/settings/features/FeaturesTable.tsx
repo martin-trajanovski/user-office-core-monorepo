@@ -1,10 +1,13 @@
 import MaterialTable, { Column } from '@material-table/core';
 import DisabledByDefaultOutlinedIcon from '@mui/icons-material/DisabledByDefaultOutlined';
 import DoneOutlined from '@mui/icons-material/DoneOutlined';
+import {
+  Feature,
+  FeatureUpdateAction,
+} from '@user-office-software-libs/shared-types';
 import React, { useContext } from 'react';
 
 import { FeatureContext } from 'context/FeatureContextProvider';
-import { Feature, FeatureUpdateAction } from 'generated/sdk';
 // import { useFeatures } from 'hooks/admin/useFeatures';
 import { tableIcons } from 'utils/materialIcons';
 import useDataApiWithFeedback from 'utils/useDataApiWithFeedback';

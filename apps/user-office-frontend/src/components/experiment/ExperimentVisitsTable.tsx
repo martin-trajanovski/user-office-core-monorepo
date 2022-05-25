@@ -1,8 +1,11 @@
 import MaterialTable from '@material-table/core';
 import { makeStyles } from '@mui/styles';
+import {
+  GetScheduledEventsCoreQuery,
+  TrainingStatus,
+} from '@user-office-software-libs/shared-types';
 import React from 'react';
 
-import { GetScheduledEventsCoreQuery, TrainingStatus } from 'generated/sdk';
 import { useFormattedDateTime } from 'hooks/admin/useFormattedDateTime';
 import { tableIcons } from 'utils/materialIcons';
 import { getFullUserName } from 'utils/user';

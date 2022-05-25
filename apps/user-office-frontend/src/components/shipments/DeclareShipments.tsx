@@ -1,5 +1,9 @@
 import { Dialog, DialogContent, Typography, Alert, Stack } from '@mui/material';
 import { makeStyles } from '@mui/styles';
+import {
+  ShipmentFragment,
+  ShipmentStatus,
+} from '@user-office-software-libs/shared-types';
 import React, { useState } from 'react';
 
 import UOLoader from 'components/common/UOLoader';
@@ -7,7 +11,6 @@ import {
   QuestionnairesList,
   QuestionnairesListRow,
 } from 'components/questionary/questionaryComponents/QuestionnairesList';
-import { ShipmentFragment, ShipmentStatus } from 'generated/sdk';
 import { useScheduledEvent } from 'hooks/scheduledEvent/useScheduledEvent';
 import { useShipments } from 'hooks/shipment/useShipments';
 import useDataApiWithFeedback from 'utils/useDataApiWithFeedback';

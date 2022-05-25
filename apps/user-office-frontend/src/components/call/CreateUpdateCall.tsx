@@ -1,5 +1,11 @@
 import Typography from '@mui/material/Typography';
 import {
+  Call,
+  AllocationTimeUnits,
+  UpdateCallInput,
+  TemplateGroupId,
+} from '@user-office-software-libs/shared-types';
+import {
   createCallValidationSchemas,
   updateCallValidationSchemas,
 } from '@user-office-software/duo-validation/lib/Call';
@@ -8,12 +14,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import { Wizard, WizardStep } from 'components/common/MultistepWizard';
-import {
-  Call,
-  AllocationTimeUnits,
-  UpdateCallInput,
-  TemplateGroupId,
-} from 'generated/sdk';
 import { useFormattedDateTime } from 'hooks/admin/useFormattedDateTime';
 import { useActiveTemplates } from 'hooks/call/useCallTemplates';
 import { useProposalWorkflowsData } from 'hooks/settings/useProposalWorkflowsData';

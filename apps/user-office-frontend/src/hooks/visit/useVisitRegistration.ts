@@ -1,8 +1,7 @@
+import { GetVisitRegistrationQuery } from '@user-office-software-libs/shared-types';
 import { useEffect, useState } from 'react';
 
 import { useDataApi } from 'hooks/common/useDataApi';
-
-import { GetVisitRegistrationQuery } from './../../generated/sdk';
 
 export function useVisitRegistration(visitId: number) {
   const [registration, setRegistration] = useState<

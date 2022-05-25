@@ -1,4 +1,9 @@
 import { Typography } from '@mui/material';
+import {
+  Call,
+  InstrumentWithAvailabilityTime,
+  UserRole,
+} from '@user-office-software-libs/shared-types';
 import React, { useState } from 'react';
 import { useQueryParams } from 'use-query-params';
 
@@ -9,7 +14,6 @@ import SuperMaterialTable, {
   DefaultQueryParams,
   UrlQueryParamsType,
 } from 'components/common/SuperMaterialTable';
-import { Call, InstrumentWithAvailabilityTime, UserRole } from 'generated/sdk';
 import { useFormattedDateTime } from 'hooks/admin/useFormattedDateTime';
 import { useCallsData } from 'hooks/call/useCallsData';
 import { tableIcons } from 'utils/materialIcons';

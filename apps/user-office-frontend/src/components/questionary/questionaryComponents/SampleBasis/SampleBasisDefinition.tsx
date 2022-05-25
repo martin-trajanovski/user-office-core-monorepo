@@ -1,7 +1,7 @@
 import InboxIcon from '@mui/icons-material/Inbox';
+import { DataType } from '@user-office-software-libs/shared-types';
 import React from 'react';
 
-import { DataType } from 'generated/sdk';
 import { SampleSubmissionState } from 'models/questionary/sample/SampleSubmissionState';
 
 import { QuestionaryComponentDefinition } from '../../QuestionaryComponentRegistry';

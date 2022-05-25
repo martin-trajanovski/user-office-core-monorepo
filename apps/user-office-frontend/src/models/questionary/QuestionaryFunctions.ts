@@ -1,4 +1,3 @@
-import { getQuestionaryComponentDefinition } from 'components/questionary/QuestionaryComponentRegistry';
 import {
   Answer,
   AnswerInput,
@@ -8,7 +7,9 @@ import {
   QuestionaryStep,
   QuestionTemplateRelation,
   TemplateStep,
-} from 'generated/sdk';
+} from '@user-office-software-libs/shared-types';
+
+import { getQuestionaryComponentDefinition } from 'components/questionary/QuestionaryComponentRegistry';
 
 import { ConditionEvaluator } from './ConditionEvaluator';
 

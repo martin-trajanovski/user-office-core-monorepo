@@ -1,17 +1,17 @@
 import DateAdapter from '@mui/lab/AdapterLuxon';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import useTheme from '@mui/material/styles/useTheme';
+import {
+  CreateCallMutationVariables,
+  SettingsId,
+  UpdateCallMutationVariables,
+} from '@user-office-software-libs/shared-types';
 import { Field, useFormikContext } from 'formik';
 import { TextField } from 'formik-mui';
 import { DatePicker } from 'formik-mui-lab';
 import React, { useContext } from 'react';
 
 import { SettingsContext } from 'context/SettingsContextProvider';
-import {
-  CreateCallMutationVariables,
-  SettingsId,
-  UpdateCallMutationVariables,
-} from 'generated/sdk';
 
 const CallReviewAndNotification: React.FC = () => {
   const theme = useTheme();

@@ -10,19 +10,19 @@ import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import makeStyles from '@mui/styles/makeStyles';
 import useTheme from '@mui/styles/useTheme';
-import clsx from 'clsx';
-import React, { useContext, DragEvent, useState, useEffect } from 'react';
-import { NumberParam, useQueryParams } from 'use-query-params';
-
-import { useCheckAccess } from 'components/common/Can';
-import { UserContext } from 'context/UserContextProvider';
 import {
   SepProposal,
   InstrumentWithAvailabilityTime,
   UserRole,
   SepMeetingDecision,
   Call,
-} from 'generated/sdk';
+} from '@user-office-software-libs/shared-types';
+import clsx from 'clsx';
+import React, { useContext, DragEvent, useState, useEffect } from 'react';
+import { NumberParam, useQueryParams } from 'use-query-params';
+
+import { useCheckAccess } from 'components/common/Can';
+import { UserContext } from 'context/UserContextProvider';
 import { useSEPProposalsByInstrument } from 'hooks/SEP/useSEPProposalsByInstrument';
 import { tableIcons } from 'utils/materialIcons';
 import {

@@ -1,4 +1,5 @@
 import { Typography } from '@mui/material';
+import { GetScheduledEventsCoreQuery } from '@user-office-software-libs/shared-types';
 import React, { useEffect } from 'react';
 import { useQueryParams, NumberParam, DateParam } from 'use-query-params';
 
@@ -6,7 +7,6 @@ import SuperMaterialTable, {
   DefaultQueryParams,
 } from 'components/common/SuperMaterialTable';
 import ProposalEsiDetailsButton from 'components/questionary/questionaryComponents/ProposalEsiBasis/ProposalEsiDetailsButton';
-import { GetScheduledEventsCoreQuery } from 'generated/sdk';
 import { useFormattedDateTime } from 'hooks/admin/useFormattedDateTime';
 import { useScheduledEvents } from 'hooks/scheduledEvent/useScheduledEvents';
 import { tableIcons } from 'utils/materialIcons';

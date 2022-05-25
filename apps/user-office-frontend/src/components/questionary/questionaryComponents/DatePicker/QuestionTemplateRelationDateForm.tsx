@@ -1,6 +1,10 @@
 import DateAdapter from '@mui/lab/AdapterLuxon';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import useTheme from '@mui/material/styles/useTheme';
+import {
+  DateConfig,
+  SettingsId,
+} from '@user-office-software-libs/shared-types';
 import { Field } from 'formik';
 import { CheckboxWithLabel, TextField } from 'formik-mui';
 import { DatePicker, DateTimePicker } from 'formik-mui-lab';
@@ -10,7 +14,6 @@ import * as Yup from 'yup';
 import TitledContainer from 'components/common/TitledContainer';
 import { QuestionTemplateRelationFormProps } from 'components/questionary/QuestionaryComponentRegistry';
 import { SettingsContext } from 'context/SettingsContextProvider';
-import { DateConfig, SettingsId } from 'generated/sdk';
 import { minMaxDateTimeCalculations } from 'utils/Time';
 
 import QuestionDependencyList from '../QuestionDependencyList';

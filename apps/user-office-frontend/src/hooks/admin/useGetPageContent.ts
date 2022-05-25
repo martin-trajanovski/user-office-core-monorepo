@@ -1,6 +1,6 @@
+import { PageName } from '@user-office-software-libs/shared-types';
 import { useEffect, useState } from 'react';
 
-import { PageName } from 'generated/sdk';
 import { useDataApi } from 'hooks/common/useDataApi';
 
 export function useGetPageContent(pageName: PageName) {

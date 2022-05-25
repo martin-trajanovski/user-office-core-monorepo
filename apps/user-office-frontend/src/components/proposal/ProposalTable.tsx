@@ -7,12 +7,12 @@ import Visibility from '@mui/icons-material/Visibility';
 import { Typography } from '@mui/material';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
+import { Call } from '@user-office-software-libs/shared-types';
 import PropTypes from 'prop-types';
 import React, { useContext, useEffect, useState } from 'react';
 import { Redirect } from 'react-router';
 
 import { UserContext } from 'context/UserContextProvider';
-import { Call } from 'generated/sdk';
 import { useDownloadPDFProposal } from 'hooks/proposal/useDownloadPDFProposal';
 import { ProposalData } from 'hooks/proposal/useProposalData';
 import { tableIcons } from 'utils/materialIcons';

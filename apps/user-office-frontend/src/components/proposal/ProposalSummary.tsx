@@ -1,4 +1,5 @@
 import Button from '@mui/material/Button';
+import { UserRole } from '@user-office-software-libs/shared-types';
 import React, { useContext, useEffect, useState } from 'react';
 
 import { useCheckAccess } from 'components/common/Can';
@@ -10,7 +11,6 @@ import {
   QuestionaryContext,
 } from 'components/questionary/QuestionaryContext';
 import ProposalQuestionaryReview from 'components/review/ProposalQuestionaryReview';
-import { UserRole } from 'generated/sdk';
 import { useDataApi } from 'hooks/common/useDataApi';
 import { useDownloadPDFProposal } from 'hooks/proposal/useDownloadPDFProposal';
 import withConfirm, { WithConfirmType } from 'utils/withConfirm';

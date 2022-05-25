@@ -1,6 +1,6 @@
+import { Call, CallsFilter } from '@user-office-software-libs/shared-types';
 import { useEffect, useState, SetStateAction } from 'react';
 
-import { Call, CallsFilter } from 'generated/sdk';
 import { useDataApi } from 'hooks/common/useDataApi';
 
 export function useCallsData(filter?: CallsFilter) {

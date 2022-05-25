@@ -1,8 +1,8 @@
+import { UserRole } from '@user-office-software-libs/shared-types';
 import * as Yup from 'yup';
 
 import { QuestionaryComponentDefinition } from 'components/questionary/QuestionaryComponentRegistry';
 import { getCurrentUser } from 'context/UserContextProvider';
-import { UserRole } from 'generated/sdk';
 
 export const createProposalBasisValidationSchema: QuestionaryComponentDefinition['createYupValidationSchema'] =
   () => {

@@ -9,6 +9,11 @@ import IconButton from '@mui/material/IconButton';
 import TextField from '@mui/material/TextField';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
+import {
+  BasicUserDetails,
+  UserRole,
+  Sep,
+} from '@user-office-software-libs/shared-types';
 import React, { useState, useContext } from 'react';
 
 import { ActionButtonContainer } from 'components/common/ActionButtonContainer';
@@ -16,7 +21,6 @@ import { useCheckAccess } from 'components/common/Can';
 import UOLoader from 'components/common/UOLoader';
 import ParticipantModal from 'components/proposal/ParticipantModal';
 import { UserContext } from 'context/UserContextProvider';
-import { BasicUserDetails, UserRole, Sep } from 'generated/sdk';
 import { useRenewToken } from 'hooks/common/useRenewToken';
 import { useSEPReviewersData } from 'hooks/SEP/useSEPReviewersData';
 import { tableIcons } from 'utils/materialIcons';

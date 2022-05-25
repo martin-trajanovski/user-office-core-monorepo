@@ -1,9 +1,9 @@
 import TodayIcon from '@mui/icons-material/Today';
+import { DataType } from '@user-office-software-libs/shared-types';
 import { dateQuestionValidationSchema } from '@user-office-software/duo-validation';
 import React from 'react';
 
 import defaultRenderer from 'components/questionary/DefaultQuestionRenderer';
-import { DataType } from 'generated/sdk';
 
 import { QuestionaryComponentDefinition } from '../../QuestionaryComponentRegistry';
 import DateAnswerRenderer from './DateAnswerRenderer';

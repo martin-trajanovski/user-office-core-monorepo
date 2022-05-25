@@ -1,5 +1,11 @@
 import { Paper } from '@mui/material';
 import makeStyles from '@mui/styles/makeStyles';
+import {
+  Answer,
+  QuestionaryStep,
+  SampleStatus,
+  SubTemplateConfig,
+} from '@user-office-software-libs/shared-types';
 import { Field, FieldProps, FormikProps } from 'formik';
 import React, { useContext, useState } from 'react';
 
@@ -11,12 +17,6 @@ import {
   createMissingContextErrorMessage,
   QuestionaryContext,
 } from 'components/questionary/QuestionaryContext';
-import {
-  Answer,
-  QuestionaryStep,
-  SampleStatus,
-  SubTemplateConfig,
-} from 'generated/sdk';
 import { SampleCore } from 'models/questionary/sample/SampleCore';
 import { SampleWithQuestionary } from 'models/questionary/sample/SampleWithQuestionary';
 import useDataApiWithFeedback from 'utils/useDataApiWithFeedback';

@@ -7,15 +7,15 @@ import Switch from '@mui/material/Switch';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import makeStyles from '@mui/styles/makeStyles';
 import useTheme from '@mui/styles/useTheme';
-import React, { useState } from 'react';
-import { DragDropContext, Droppable, DropResult } from 'react-beautiful-dnd';
-
 import {
   Question,
   QuestionaryStep,
   QuestionTemplateRelation,
   Template,
-} from 'generated/sdk';
+} from '@user-office-software-libs/shared-types';
+import React, { useState } from 'react';
+import { DragDropContext, Droppable, DropResult } from 'react-beautiful-dnd';
+
 import { usePersistQuestionaryEditorModel } from 'hooks/questionary/usePersistQuestionaryEditorModel';
 import QuestionaryEditorModel, {
   Event,

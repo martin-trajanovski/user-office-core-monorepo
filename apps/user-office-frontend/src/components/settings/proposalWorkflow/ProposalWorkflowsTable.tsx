@@ -1,5 +1,9 @@
 import Edit from '@mui/icons-material/Edit';
 import { Typography } from '@mui/material';
+import {
+  UserRole,
+  ProposalWorkflow,
+} from '@user-office-software-libs/shared-types';
 import React from 'react';
 import { useHistory } from 'react-router';
 import { useQueryParams } from 'use-query-params';
@@ -9,7 +13,6 @@ import SuperMaterialTable, {
   DefaultQueryParams,
   UrlQueryParamsType,
 } from 'components/common/SuperMaterialTable';
-import { UserRole, ProposalWorkflow } from 'generated/sdk';
 import { useProposalWorkflowsData } from 'hooks/settings/useProposalWorkflowsData';
 import { tableIcons } from 'utils/materialIcons';
 import useDataApiWithFeedback from 'utils/useDataApiWithFeedback';

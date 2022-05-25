@@ -1,13 +1,13 @@
-import React from 'react';
-
-import { AnswerRenderer } from 'components/questionary/QuestionaryComponentRegistry';
 import {
   DateConfig,
   FieldConfig,
   Maybe,
   Scalars,
   SettingsId,
-} from 'generated/sdk';
+} from '@user-office-software-libs/shared-types';
+import React from 'react';
+
+import { AnswerRenderer } from 'components/questionary/QuestionaryComponentRegistry';
 import { useFormattedDateTime } from 'hooks/admin/useFormattedDateTime';
 
 // NOTE: This is additional component because of some react warning with hooks when we use the useFormattedDateTime inside default DateAnswerRenderer component.

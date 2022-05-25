@@ -3,12 +3,12 @@ import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
 import TextField from '@mui/material/TextField';
 import makeStyles from '@mui/styles/makeStyles';
+import { ProposalWorkflow } from '@user-office-software-libs/shared-types';
 import { updateProposalWorkflowValidationSchema } from '@user-office-software/duo-validation/lib/ProposalWorkflow';
 import { Field, Form, Formik } from 'formik';
 import React, { useState } from 'react';
 
 import { ActionButtonContainer } from 'components/common/ActionButtonContainer';
-import { ProposalWorkflow } from 'generated/sdk';
 import { StyledButtonContainer } from 'styles/StyledComponents';
 
 import { Event, EventType } from './ProposalWorkflowEditorModel';

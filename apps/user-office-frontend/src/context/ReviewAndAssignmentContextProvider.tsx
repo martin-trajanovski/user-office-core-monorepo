@@ -1,7 +1,9 @@
+import {
+  SepAssignment,
+  ReviewWithNextProposalStatus,
+} from '@user-office-software-libs/shared-types';
 import PropTypes from 'prop-types';
 import React from 'react';
-
-import { SepAssignment, ReviewWithNextProposalStatus } from 'generated/sdk';
 
 interface ReviewAndAssignmentData {
   currentAssignment: SepAssignment | null;

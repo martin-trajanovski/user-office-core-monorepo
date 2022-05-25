@@ -1,10 +1,14 @@
 import MaterialTable from '@material-table/core';
 import makeStyles from '@mui/styles/makeStyles';
+import {
+  Instrument,
+  BasicUserDetails,
+  UserRole,
+} from '@user-office-software-libs/shared-types';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import { useCheckAccess } from 'components/common/Can';
-import { Instrument, BasicUserDetails, UserRole } from 'generated/sdk';
 import { tableIcons } from 'utils/materialIcons';
 import useDataApiWithFeedback from 'utils/useDataApiWithFeedback';
 

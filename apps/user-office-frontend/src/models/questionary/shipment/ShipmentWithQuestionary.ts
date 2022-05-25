@@ -1,3 +1,3 @@
-import { GetShipmentQuery } from 'generated/sdk';
+import { GetShipmentQuery } from '@user-office-software-libs/shared-types';
 
 export type ShipmentWithQuestionary = NonNullable<GetShipmentQuery['shipment']>;

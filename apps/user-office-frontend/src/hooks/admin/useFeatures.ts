@@ -1,6 +1,6 @@
+import { Feature } from '@user-office-software-libs/shared-types';
 import { useEffect, useState } from 'react';
 
-import { Feature } from 'generated/sdk';
 import { useDataApi } from 'hooks/common/useDataApi';
 
 export function useFeatures(): {

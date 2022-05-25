@@ -1,6 +1,6 @@
+import { Sep } from '@user-office-software-libs/shared-types';
 import { useState, useEffect } from 'react';
 
-import { Sep } from 'generated/sdk';
 import { useDataApi } from 'hooks/common/useDataApi';
 
 export function useSEPData(id: number) {

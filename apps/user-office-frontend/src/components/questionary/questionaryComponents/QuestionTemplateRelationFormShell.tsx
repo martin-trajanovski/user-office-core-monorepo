@@ -2,6 +2,10 @@ import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 import makeStyles from '@mui/styles/makeStyles';
+import {
+  FieldDependencyInput,
+  QuestionTemplateRelation,
+} from '@user-office-software-libs/shared-types';
 import { Form, Formik } from 'formik';
 import React from 'react';
 
@@ -10,7 +14,6 @@ import {
   getQuestionaryComponentDefinition,
   QuestionTemplateRelationFormProps,
 } from 'components/questionary/QuestionaryComponentRegistry';
-import { FieldDependencyInput, QuestionTemplateRelation } from 'generated/sdk';
 import useDataApiWithFeedback from 'utils/useDataApiWithFeedback';
 
 const useStyles = makeStyles((theme) => ({

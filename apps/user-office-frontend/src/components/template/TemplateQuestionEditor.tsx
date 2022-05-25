@@ -2,6 +2,13 @@ import LockIcon from '@mui/icons-material/Lock';
 import Grid from '@mui/material/Grid';
 import makeStyles from '@mui/styles/makeStyles';
 import useTheme from '@mui/styles/useTheme';
+import {
+  DataType,
+  DependenciesLogicOperator,
+  FieldConfig,
+  FieldDependency,
+  TemplateCategoryId,
+} from '@user-office-software-libs/shared-types';
 import React, { useState } from 'react';
 import {
   Draggable,
@@ -14,13 +21,6 @@ import {
   getQuestionaryComponentDefinition,
   getTemplateFieldIcon,
 } from 'components/questionary/QuestionaryComponentRegistry';
-import {
-  DataType,
-  DependenciesLogicOperator,
-  FieldConfig,
-  FieldDependency,
-  TemplateCategoryId,
-} from 'generated/sdk';
 import { Event, EventType } from 'models/questionary/QuestionaryEditorModel';
 
 const useStyles = makeStyles((theme) => ({

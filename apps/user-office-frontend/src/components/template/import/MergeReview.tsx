@@ -1,15 +1,15 @@
 import { Box, Button, Typography } from '@mui/material';
-import produce from 'immer';
-import React, { useCallback, useState } from 'react';
-import { useHistory } from 'react-router';
-
-import { ActionButtonContainer } from 'components/common/ActionButtonContainer';
 import {
   ConflictResolutionStrategy,
   QuestionComparison,
   SettingsId,
   TemplateValidation,
-} from 'generated/sdk';
+} from '@user-office-software-libs/shared-types';
+import produce from 'immer';
+import React, { useCallback, useState } from 'react';
+import { useHistory } from 'react-router';
+
+import { ActionButtonContainer } from 'components/common/ActionButtonContainer';
 import { useFormattedDateTime } from 'hooks/admin/useFormattedDateTime';
 import useDataApiWithFeedback from 'utils/useDataApiWithFeedback';
 

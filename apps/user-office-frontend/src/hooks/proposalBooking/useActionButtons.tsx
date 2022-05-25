@@ -3,6 +3,11 @@ import FeedbackIcon from '@mui/icons-material/Feedback';
 import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
 import GroupIcon from '@mui/icons-material/Group';
 import SchoolIcon from '@mui/icons-material/School';
+import {
+  FeedbackStatus,
+  ProposalBookingStatusCore,
+  ProposalEndStatus,
+} from '@user-office-software-libs/shared-types';
 import { DateTime } from 'luxon';
 import React, { ReactNode, useContext } from 'react';
 import { useHistory } from 'react-router';
@@ -15,11 +20,6 @@ import ActionButton, {
 import CreateUpdateVisit from 'components/proposalBooking/CreateUpdateVisit';
 import CreateUpdateVisitRegistration from 'components/visit/CreateUpdateVisitRegistration';
 import { UserContext, BasicUser } from 'context/UserContextProvider';
-import {
-  FeedbackStatus,
-  ProposalBookingStatusCore,
-  ProposalEndStatus,
-} from 'generated/sdk';
 
 import { ProposalScheduledEvent } from './useProposalBookingsScheduledEvents';
 

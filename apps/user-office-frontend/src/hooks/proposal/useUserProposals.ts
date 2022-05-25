@@ -1,6 +1,10 @@
+import {
+  Proposal,
+  ProposalPublicStatus,
+  UserRole,
+} from '@user-office-software-libs/shared-types';
 import { useEffect, useState } from 'react';
 
-import { Proposal, ProposalPublicStatus, UserRole } from 'generated/sdk';
 import { useDataApi } from 'hooks/common/useDataApi';
 
 export function useUserProposals(role = UserRole.USER) {

@@ -5,6 +5,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import makeStyles from '@mui/styles/makeStyles';
+import { Event } from '@user-office-software-libs/shared-types';
 import { FieldArray, Form, Formik } from 'formik';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -12,7 +13,6 @@ import * as yup from 'yup';
 
 import ErrorMessage from 'components/common/ErrorMessage';
 import UOLoader from 'components/common/UOLoader';
-import { Event } from 'generated/sdk';
 import { useProposalEventsData } from 'hooks/settings/useProposalEventsData';
 
 const addStatusChangingEventsToConnectionValidationSchema = yup.object().shape({

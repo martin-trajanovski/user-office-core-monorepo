@@ -1,10 +1,9 @@
 import { Grid, TextField, Autocomplete } from '@mui/material';
-import React, { useState } from 'react';
-
 import {
   QuestionFilterCompareOperator,
   SelectionFromOptionsConfig,
-} from 'generated/sdk';
+} from '@user-office-software-libs/shared-types';
+import React, { useState } from 'react';
 
 import { SearchCriteriaInputProps } from '../../../proposal/SearchCriteriaInputProps';
 

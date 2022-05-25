@@ -1,17 +1,17 @@
 import { Button, Card, CardContent, Typography } from '@mui/material';
 import Alert from '@mui/material/Alert';
+import {
+  ConflictResolutionStrategy,
+  SettingsId,
+  UnitComparison,
+  UnitsImportWithValidation,
+} from '@user-office-software-libs/shared-types';
 import produce from 'immer';
 import React, { useCallback, useState } from 'react';
 import { useHistory } from 'react-router';
 
 import { ActionButtonContainer } from 'components/common/ActionButtonContainer';
 import { ConflictResolver, DiffInfo } from 'components/common/ConflictResolver';
-import {
-  ConflictResolutionStrategy,
-  SettingsId,
-  UnitComparison,
-  UnitsImportWithValidation,
-} from 'generated/sdk';
 import { useFormattedDateTime } from 'hooks/admin/useFormattedDateTime';
 import useDataApiWithFeedback from 'utils/useDataApiWithFeedback';
 

@@ -1,9 +1,12 @@
 import MaterialTable from '@material-table/core';
 import Link from '@mui/material/Link';
+import {
+  ProposalFragment,
+  TemplateCategoryId,
+} from '@user-office-software-libs/shared-types';
 import React, { useMemo } from 'react';
 
 import CopyToClipboard from 'components/common/CopyToClipboard';
-import { ProposalFragment, TemplateCategoryId } from 'generated/sdk';
 import { useProposalsData } from 'hooks/proposal/useProposalsData';
 import { useSamplesWithQuestionaryStatus } from 'hooks/sample/useSamplesWithQuestionaryStatus';
 import { useShipments } from 'hooks/shipment/useShipments';

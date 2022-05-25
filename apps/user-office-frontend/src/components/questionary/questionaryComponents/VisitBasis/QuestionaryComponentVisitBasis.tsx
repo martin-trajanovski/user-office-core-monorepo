@@ -1,6 +1,11 @@
 import DateAdapter from '@mui/lab/AdapterLuxon';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import useTheme from '@mui/material/styles/useTheme';
+import {
+  Sdk,
+  SettingsId,
+  UpdateVisitRegistrationMutationVariables,
+} from '@user-office-software-libs/shared-types';
 import { Field } from 'formik';
 import { DatePicker } from 'formik-mui-lab';
 import { useContext } from 'react';
@@ -12,11 +17,6 @@ import {
   QuestionaryContext,
 } from 'components/questionary/QuestionaryContext';
 import { VisitRegistrationContextType } from 'components/visit/VisitRegistrationContainer';
-import {
-  Sdk,
-  SettingsId,
-  UpdateVisitRegistrationMutationVariables,
-} from 'generated/sdk';
 import { useFormattedDateTime } from 'hooks/admin/useFormattedDateTime';
 import { SubmitActionDependencyContainer } from 'hooks/questionary/useSubmitActions';
 import { VisitRegistrationSubmissionState } from 'models/questionary/visit/VisitRegistrationSubmissionState';

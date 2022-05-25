@@ -7,11 +7,14 @@ import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import TextField from '@mui/material/TextField';
 import makeStyles from '@mui/styles/makeStyles';
+import {
+  NumberInputConfig,
+  Unit,
+} from '@user-office-software-libs/shared-types';
 import { getIn } from 'formik';
 import React, { useState } from 'react';
 
 import { BasicComponentProps } from 'components/proposal/IBasicComponentProps';
-import { NumberInputConfig, Unit } from 'generated/sdk';
 import expressionToFunction from 'utils/expressionToFunction';
 import isEventFromAutoComplete from 'utils/isEventFromAutoComplete';
 

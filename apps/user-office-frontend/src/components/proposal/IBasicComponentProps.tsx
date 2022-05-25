@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { Answer } from '@user-office-software-libs/shared-types';
 import { FormikProps } from 'formik';
-
-import { Answer } from 'generated/sdk';
 
 export interface BasicComponentProps {
   answer: Answer;

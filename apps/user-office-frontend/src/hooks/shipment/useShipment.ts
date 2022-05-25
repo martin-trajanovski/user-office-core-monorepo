@@ -1,6 +1,6 @@
+import { GetShipmentQuery } from '@user-office-software-libs/shared-types';
 import { useEffect, useState } from 'react';
 
-import { GetShipmentQuery } from 'generated/sdk';
 import { useDataApi } from 'hooks/common/useDataApi';
 
 export function useShipment(shipmentId: number) {

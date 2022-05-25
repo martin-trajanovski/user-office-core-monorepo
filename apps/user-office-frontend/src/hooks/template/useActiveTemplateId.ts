@@ -1,6 +1,6 @@
+import { TemplateGroupId } from '@user-office-software-libs/shared-types';
 import { useEffect, useState } from 'react';
 
-import { TemplateGroupId } from 'generated/sdk';
 import { useDataApi } from 'hooks/common/useDataApi';
 
 export function useActiveTemplateId(templateGroupId: TemplateGroupId) {

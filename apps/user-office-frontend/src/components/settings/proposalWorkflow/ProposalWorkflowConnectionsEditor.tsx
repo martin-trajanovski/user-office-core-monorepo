@@ -9,6 +9,11 @@ import IconButton from '@mui/material/IconButton';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import makeStyles from '@mui/styles/makeStyles';
 import useTheme from '@mui/styles/useTheme';
+import {
+  ProposalWorkflowConnection,
+  ProposalWorkflowConnectionGroup,
+} from '@user-office-software-libs/shared-types';
+import { Event as ProposalEvent } from '@user-office-software-libs/shared-types';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import {
@@ -17,12 +22,6 @@ import {
   Droppable,
   NotDraggingStyle,
 } from 'react-beautiful-dnd';
-
-import {
-  ProposalWorkflowConnection,
-  ProposalWorkflowConnectionGroup,
-} from 'generated/sdk';
-import { Event as ProposalEvent } from 'generated/sdk';
 
 import AddNewWorkflowConnectionsRow from './AddNewWorkflowConnectionsRow';
 import AddStatusChangingEventsToConnection from './AddStatusChangingEventsToConnection';

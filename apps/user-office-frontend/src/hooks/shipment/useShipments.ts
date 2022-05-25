@@ -1,6 +1,6 @@
+import { ShipmentsFilter } from '@user-office-software-libs/shared-types';
 import { SetStateAction, useEffect, useState } from 'react';
 
-import { ShipmentsFilter } from 'generated/sdk';
 import { useDataApi } from 'hooks/common/useDataApi';
 import { ShipmentCore } from 'models/questionary/shipment/ShipmentCore';
 

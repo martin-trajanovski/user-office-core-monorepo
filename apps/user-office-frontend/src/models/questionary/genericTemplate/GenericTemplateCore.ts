@@ -1,4 +1,4 @@
-import { GetGenericTemplatesWithQuestionaryStatusQuery } from 'generated/sdk';
+import { GetGenericTemplatesWithQuestionaryStatusQuery } from '@user-office-software-libs/shared-types';
 
 export type GenericTemplateCore = NonNullable<
   GetGenericTemplatesWithQuestionaryStatusQuery['genericTemplates']

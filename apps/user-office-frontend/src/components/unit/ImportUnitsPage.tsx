@@ -1,9 +1,9 @@
 import Typography from '@mui/material/Typography';
+import { UnitsImportWithValidation } from '@user-office-software-libs/shared-types';
 import React from 'react';
 import { UnitMergeReview } from 'units/UnitMergeReview';
 
 import { SelectImportFile } from 'components/common/SelectImportFile';
-import { UnitsImportWithValidation } from 'generated/sdk';
 import { StyledContainer, StyledPaper } from 'styles/StyledComponents';
 import useDataApiWithFeedback from 'utils/useDataApiWithFeedback';
 

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import { useDataApi } from 'hooks/common/useDataApi';
 
-import { GetScheduledEventWithShipmentsQuery } from './../../generated/sdk';
+import { GetScheduledEventWithShipmentsQuery } from '@user-office-software-libs/shared-types';
 
 export function useScheduledEventWithShipments(scheduledEventId: number) {
   const [scheduledEvent, setScheduledEvent] = useState<

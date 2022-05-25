@@ -7,6 +7,13 @@ import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
 import makeStyles from '@mui/styles/makeStyles';
 import { Editor } from '@tinymce/tinymce-react';
+import {
+  Proposal,
+  ProposalEndStatus,
+  SaveSepMeetingDecisionInput,
+  SepMeetingDecision,
+  UserRole,
+} from '@user-office-software-libs/shared-types';
 import { saveSepMeetingDecisionValidationSchema } from '@user-office-software/duo-validation';
 import { Formik, Form, Field, useFormikContext } from 'formik';
 import { CheckboxWithLabel, Select } from 'formik-mui';
@@ -16,13 +23,6 @@ import { Prompt } from 'react-router';
 
 import { useCheckAccess } from 'components/common/Can';
 import UOLoader from 'components/common/UOLoader';
-import {
-  Proposal,
-  ProposalEndStatus,
-  SaveSepMeetingDecisionInput,
-  SepMeetingDecision,
-  UserRole,
-} from 'generated/sdk';
 import { StyledPaper, StyledButtonContainer } from 'styles/StyledComponents';
 import useDataApiWithFeedback from 'utils/useDataApiWithFeedback';
 import { Option } from 'utils/utilTypes';

@@ -1,6 +1,7 @@
 import { FormControl, InputLabel, Select, TextField } from '@mui/material';
 import MenuItem from '@mui/material/MenuItem';
 import makeStyles from '@mui/styles/makeStyles';
+import { Sample, UserRole } from '@user-office-software-libs/shared-types';
 import { FormikErrors } from 'formik';
 import React, { useContext, useState } from 'react';
 
@@ -14,7 +15,6 @@ import {
 } from 'components/questionary/QuestionaryContext';
 import { ShipmentContextType } from 'components/shipments/ShipmentContainer';
 import { UserContext } from 'context/UserContextProvider';
-import { Sample, UserRole } from 'generated/sdk';
 import { useUserProposals } from 'hooks/proposal/useUserProposals';
 import { SubmitActionDependencyContainer } from 'hooks/questionary/useSubmitActions';
 import { useProposalSamples } from 'hooks/sample/useProposalSamples';

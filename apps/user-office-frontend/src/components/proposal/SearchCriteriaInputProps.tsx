@@ -1,7 +1,7 @@
 import {
   QuestionFilterCompareOperator,
   QuestionTemplateRelationFragment,
-} from 'generated/sdk';
+} from '@user-office-software-libs/shared-types';
 
 import { SearchCriteria } from '../common/proposalFilters/QuestionaryFilter';
 

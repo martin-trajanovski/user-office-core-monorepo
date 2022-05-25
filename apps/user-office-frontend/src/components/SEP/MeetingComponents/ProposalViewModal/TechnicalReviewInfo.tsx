@@ -15,6 +15,10 @@ import TableContainer from '@mui/material/TableContainer';
 import TableRow from '@mui/material/TableRow';
 import Typography from '@mui/material/Typography';
 import makeStyles from '@mui/styles/makeStyles';
+import {
+  Proposal,
+  TechnicalReview,
+} from '@user-office-software-libs/shared-types';
 import { updateTimeAllocationValidationSchema } from '@user-office-software/duo-validation';
 import clsx from 'clsx';
 import { Formik, Form, Field } from 'formik';
@@ -23,7 +27,6 @@ import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
 import UOLoader from 'components/common/UOLoader';
-import { Proposal, TechnicalReview } from 'generated/sdk';
 import { StyledPaper } from 'styles/StyledComponents';
 import useDataApiWithFeedback from 'utils/useDataApiWithFeedback';
 import { getFullUserName } from 'utils/user';

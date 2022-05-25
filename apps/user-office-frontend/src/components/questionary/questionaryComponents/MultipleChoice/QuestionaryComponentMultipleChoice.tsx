@@ -8,12 +8,12 @@ import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import makeStyles from '@mui/styles/makeStyles';
+import { SelectionFromOptionsConfig } from '@user-office-software-libs/shared-types';
 import { getIn } from 'formik';
 import React, { useEffect, useState } from 'react';
 
 import MultiMenuItem from 'components/common/MultiMenuItem';
 import { BasicComponentProps } from 'components/proposal/IBasicComponentProps';
-import { SelectionFromOptionsConfig } from 'generated/sdk';
 
 const toArray = (input: string | string[]): string[] => {
   if (typeof input === 'string') {

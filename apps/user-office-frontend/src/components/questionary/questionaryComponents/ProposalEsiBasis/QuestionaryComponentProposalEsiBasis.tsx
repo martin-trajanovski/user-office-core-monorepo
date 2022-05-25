@@ -13,6 +13,12 @@ import {
   Typography,
 } from '@mui/material';
 import ListItemIcon from '@mui/material/ListItemIcon';
+import {
+  DataType,
+  GetSampleEsiQuery,
+  SampleDeclarationConfig,
+  SampleFragment,
+} from '@user-office-software-libs/shared-types';
 import { Field, FieldProps } from 'formik';
 import React, { MouseEvent, useContext, useState } from 'react';
 
@@ -27,12 +33,6 @@ import {
   QuestionaryContext,
 } from 'components/questionary/QuestionaryContext';
 import SampleEsiContainer from 'components/sampleEsi/SampleEsiContainer';
-import {
-  DataType,
-  GetSampleEsiQuery,
-  SampleDeclarationConfig,
-  SampleFragment,
-} from 'generated/sdk';
 import { getQuestionsByType } from 'models/questionary/QuestionaryFunctions';
 import { SampleEsiWithQuestionary } from 'models/questionary/sampleEsi/SampleEsiWithQuestionary';
 import { StyledButtonContainer } from 'styles/StyledComponents';

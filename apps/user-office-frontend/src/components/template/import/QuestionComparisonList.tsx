@@ -1,6 +1,9 @@
+import {
+  ConflictResolutionStrategy,
+  QuestionComparison,
+} from '@user-office-software-libs/shared-types';
 import React from 'react';
 
-import { ConflictResolutionStrategy, QuestionComparison } from 'generated/sdk';
 import { deepEqual } from 'utils/json';
 
 import { ConflictResolver, DiffInfo } from '../../common/ConflictResolver';

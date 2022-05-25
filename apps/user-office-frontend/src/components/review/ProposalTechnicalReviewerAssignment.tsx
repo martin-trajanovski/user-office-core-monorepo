@@ -2,11 +2,11 @@ import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import makeStyles from '@mui/styles/makeStyles';
+import { UserRole } from '@user-office-software-libs/shared-types';
 import clsx from 'clsx';
 import React, { useState, Dispatch, SetStateAction } from 'react';
 
 import { useCheckAccess } from 'components/common/Can';
-import { UserRole } from 'generated/sdk';
 import { ProposalData } from 'hooks/proposal/useProposalData';
 
 import AssignTechnicalReview from './AssignTechnicalReview';

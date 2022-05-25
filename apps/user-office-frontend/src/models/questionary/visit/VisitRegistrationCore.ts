@@ -1,4 +1,4 @@
-import { GetUserProposalBookingsWithEventsQuery } from 'generated/sdk';
+import { GetUserProposalBookingsWithEventsQuery } from '@user-office-software-libs/shared-types';
 
 export type VisitRegistrationCore = NonNullable<
   NonNullable<

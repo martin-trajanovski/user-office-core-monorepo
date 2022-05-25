@@ -1,4 +1,5 @@
 import { Typography } from '@mui/material';
+import { Institution } from '@user-office-software-libs/shared-types';
 import React from 'react';
 import { useQueryParams } from 'use-query-params';
 
@@ -6,7 +7,6 @@ import SuperMaterialTable, {
   DefaultQueryParams,
   UrlQueryParamsType,
 } from 'components/common/SuperMaterialTable';
-import { Institution } from 'generated/sdk';
 import { useInstitutionsData } from 'hooks/admin/useInstitutionData';
 import { tableIcons } from 'utils/materialIcons';
 import useDataApiWithFeedback from 'utils/useDataApiWithFeedback';

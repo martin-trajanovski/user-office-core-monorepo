@@ -1,8 +1,7 @@
+import { SampleFragment } from '@user-office-software-libs/shared-types';
 import { useEffect, useState } from 'react';
 
 import { useDataApi } from 'hooks/common/useDataApi';
-
-import { SampleFragment } from './../../generated/sdk';
 
 export function useSample(sampleId: number) {
   const [sample, setSample] = useState<SampleFragment | null>(null);
