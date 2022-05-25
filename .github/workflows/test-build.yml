@@ -88,6 +88,8 @@ jobs:
           export USER_OFFICE_FACTORY_ENDPOINT=noop
           export SCHEMA_URL=http://localhost:80/graphql
 
+          ls
+
           npm run dev
 
           while true; do
