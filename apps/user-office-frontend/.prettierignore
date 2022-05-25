@@ -6,3 +6,4 @@ src/generated/
 README.md
 .vscode/
 cypress/fixtures/
+craco.config.js

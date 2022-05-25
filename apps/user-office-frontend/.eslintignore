@@ -8,3 +8,4 @@ public
 src/serviceWorker.js
 src/setupProxy.js
 server.js
+craco.config.js

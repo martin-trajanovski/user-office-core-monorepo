@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@user-office-software-libs/shared-types": [
+        "../../libs/shared-types/src/index.ts"
+      ],
+      "components/*": ["./src/components/*"],
+      "context/*": ["./src/context/*"],
+      "hooks/*": ["./src/hooks/*"],
+      "utils/*": ["./src/utils/*"],
+      "models/*": ["./src/models/*"],
+      "styles/*": ["./src/styles/*"],
+      "units/*": ["./src/units/*"],
+      "images/*": ["./src/images/*"]
+    }
+  }
+}
