@@ -77,8 +77,6 @@ jobs:
 
       - name: Generate and compare SDK
         run: |
-          cd "$GITHUB_WORKSPACE/.."
-
           REPO_DIR_NAME=$(basename $GITHUB_WORKSPACE)
 
           export USER_OFFICE_BACKEND_DIR=apps/user-office-backend
@@ -87,8 +85,6 @@ jobs:
 
           export USER_OFFICE_FACTORY_ENDPOINT=noop
           export SCHEMA_URL=http://localhost:80/graphql
-
-          ls
 
           npm run dev
 
@@ -252,8 +248,6 @@ jobs:
         env:
           SVC_ACC_TOKEN: ${{ secrets.SVC_ACC_TOKEN }}
         run: |
-          cd "$GITHUB_WORKSPACE/.."
-
           REPO_DIR_NAME=$(basename $GITHUB_WORKSPACE)
 
           export USER_OFFICE_BACKEND_DIR=apps/user-office-backend
