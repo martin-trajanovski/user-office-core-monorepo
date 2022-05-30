@@ -30,7 +30,7 @@ services:
       tokenLife: 7d
       baseURL: localhost:3000
       SPARKPOST_TOKEN: dummytoken
-      NODE_ENV: test
+      NODE_ENV: development
       DEPENDENCY_CONFIG: e2e
       USER_OFFICE_FACTORY_ENDPOINT: localhost:4600
       TZ: Europe/Stockholm
