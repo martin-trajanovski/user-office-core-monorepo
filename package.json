@@ -24,7 +24,7 @@
     "dev:backend": "cd apps/user-office-backend && npm run dev",
     "dev:frontend": "cd apps/user-office-frontend && npm run dev",
     "generate:shared:types": "cd libs/shared-types && node scripts/generate-graphql-sdk.js",
-    "e2e:after:dev": "concurrently \"npm run dev\" \"wait-on http://localhost:3000 && npm run test:frontend\""
+    "e2e:after:dev": "concurrently \"npm run dev\" \"wait-on http://localhost:3000 && cd apps/user-office-frontend-e2e && npm run cy:run:action\""
   },
   "keywords": [
     "duo",
