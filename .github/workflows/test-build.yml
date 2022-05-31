@@ -105,6 +105,7 @@ jobs:
       - name: Run e2e tests
         env:
           USER_OFFICE_BACKEND_DIR: apps/user-office-backend
+          USER_OFFICE_FRONTEND_DIR: apps/user-office-frontend
           USER_OFFICE_BACKEND: http://localhost:4000/graphql
           USER_OFFICE_ENDPOINT: $USER_OFFICE_BACKEND
           DEPENDENCY_CONFIG: ess
@@ -121,8 +122,6 @@ jobs:
           CYPRES_SPEC_PATTERN: ${{ matrix.pattern }}
         run: |
           REPO_DIR_NAME=$(basename $GITHUB_WORKSPACE)
-
-          export USER_OFFICE_FRONTEND_DIR=$REPO_DIR_NAME
           export BUILD_TAG=${{ github.sha }}
 
           npm install
