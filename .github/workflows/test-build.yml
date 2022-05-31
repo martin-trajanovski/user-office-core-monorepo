@@ -70,23 +70,9 @@ jobs:
           key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-${{ env.cache-name }}-
-  cypress:
-    runs-on: ubuntu-latest
-    needs: build
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Login to GitHub Packages Docker Registry
-        uses: docker/login-action@v1
-        with:
-          registry: docker.pkg.github.com
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
   e2e:
     runs-on: ubuntu-latest
-    needs: [resolve_dep, cypress]
+    needs: [resolve_dep, build]
 
     strategy:
       fail-fast: false
@@ -121,7 +107,6 @@ jobs:
           SVC_ACC_TOKEN: ${{ secrets.SVC_ACC_TOKEN }}
           CYPRES_SPEC_PATTERN: ${{ matrix.pattern }}
         run: |
-          REPO_DIR_NAME=$(basename $GITHUB_WORKSPACE)
           export BUILD_TAG=${{ github.sha }}
 
           npm install
