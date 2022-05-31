@@ -1,5 +1,10 @@
 import Grid from '@mui/material/Grid';
 import LinearProgress from '@mui/material/LinearProgress';
+import {
+  ProposalStatus,
+  ProposalWorkflowConnection,
+  ProposalWorkflowConnectionGroup,
+} from '@user-office-software-libs/shared-types';
 import { useSnackbar } from 'notistack';
 import React from 'react';
 import {
@@ -8,11 +13,6 @@ import {
   DropResult,
 } from 'react-beautiful-dnd';
 
-import {
-  ProposalStatus,
-  ProposalWorkflowConnection,
-  ProposalWorkflowConnectionGroup,
-} from 'generated/sdk';
 import { usePersistProposalWorkflowEditorModel } from 'hooks/settings/usePersistProposalWorkflowEditorModel';
 import { useProposalStatusesData } from 'hooks/settings/useProposalStatusesData';
 import { StyledContainer, StyledPaper } from 'styles/StyledComponents';

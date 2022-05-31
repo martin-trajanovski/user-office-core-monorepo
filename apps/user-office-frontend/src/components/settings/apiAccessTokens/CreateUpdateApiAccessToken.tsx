@@ -7,6 +7,7 @@ import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 import makeStyles from '@mui/styles/makeStyles';
+import { PermissionsWithAccessToken } from '@user-office-software-libs/shared-types';
 import {
   createApiAccessTokenValidationSchema,
   updateApiAccessTokenValidationSchema,
@@ -18,7 +19,6 @@ import React from 'react';
 import ErrorMessage from 'components/common/ErrorMessage';
 import SimpleTabs from 'components/common/TabPanel';
 import UOLoader from 'components/common/UOLoader';
-import { PermissionsWithAccessToken } from 'generated/sdk';
 import { useQueriesAndMutationsData } from 'hooks/admin/useQueriesAndMutationsData';
 import { StyledPaper } from 'styles/StyledComponents';
 import useDataApiWithFeedback from 'utils/useDataApiWithFeedback';

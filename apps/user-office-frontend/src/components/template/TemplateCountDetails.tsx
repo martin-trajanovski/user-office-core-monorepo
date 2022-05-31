@@ -1,8 +1,8 @@
 import MaterialTable from '@material-table/core';
 import { Link } from '@mui/material';
+import { GetTemplatesQuery } from '@user-office-software-libs/shared-types';
 import React, { useMemo } from 'react';
 
-import { GetTemplatesQuery } from 'generated/sdk';
 import { QuestionWithUsage } from 'hooks/template/useQuestions';
 import { useTemplates } from 'hooks/template/useTemplates';
 import { tableIcons } from 'utils/materialIcons';

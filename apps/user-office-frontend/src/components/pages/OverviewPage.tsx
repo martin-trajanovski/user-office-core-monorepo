@@ -1,3 +1,8 @@
+import {
+  PageName,
+  UserRole,
+  FeatureId,
+} from '@user-office-software-libs/shared-types';
 import parse from 'html-react-parser';
 import React, { useContext } from 'react';
 
@@ -6,7 +11,6 @@ import ProposalTableUser from 'components/proposal/ProposalTableUser';
 import UserUpcomingExperimentsTable from 'components/proposalBooking/UserUpcomingExperimentsTable';
 import ProposalTableReviewer from 'components/review/ProposalTableReviewer';
 import { FeatureContext } from 'context/FeatureContextProvider';
-import { PageName, UserRole, FeatureId } from 'generated/sdk';
 import { useGetPageContent } from 'hooks/admin/useGetPageContent';
 import { StyledContainer, StyledPaper } from 'styles/StyledComponents';
 

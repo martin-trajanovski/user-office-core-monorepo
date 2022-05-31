@@ -1,8 +1,11 @@
+import {
+  QuestionTemplateRelation,
+  Template,
+} from '@user-office-software-libs/shared-types';
 import React from 'react';
 
 import StyledModal from 'components/common/StyledModal';
 import { createQuestionTemplateRelationForm } from 'components/questionary/QuestionaryComponentRegistry';
-import { QuestionTemplateRelation, Template } from 'generated/sdk';
 import { Event, EventType } from 'models/questionary/QuestionaryEditorModel';
 
 export default function QuestionTemplateRelationEditor(props: {

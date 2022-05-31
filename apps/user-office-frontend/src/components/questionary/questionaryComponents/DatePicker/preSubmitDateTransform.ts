@@ -1,7 +1,7 @@
+import { DateConfig } from '@user-office-software-libs/shared-types';
 import { DateTime } from 'luxon';
 
 import { QuestionaryComponentDefinition } from 'components/questionary/QuestionaryComponentRegistry';
-import { DateConfig } from 'generated/sdk';
 
 export const preSubmitDateTransform: QuestionaryComponentDefinition['preSubmitTransform'] =
   (answer) => {

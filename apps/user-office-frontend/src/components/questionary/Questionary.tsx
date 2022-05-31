@@ -1,10 +1,10 @@
 import { Step, Stepper, Typography } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import makeStyles from '@mui/styles/makeStyles';
+import { UserRole } from '@user-office-software-libs/shared-types';
 import React, { useContext, useRef, useEffect } from 'react';
 
 import { useCheckAccess } from 'components/common/Can';
-import { UserRole } from 'generated/sdk';
 
 import {
   createMissingContextErrorMessage,

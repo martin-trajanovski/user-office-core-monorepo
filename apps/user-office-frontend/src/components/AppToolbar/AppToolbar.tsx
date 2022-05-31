@@ -7,6 +7,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import makeStyles from '@mui/styles/makeStyles';
+import { SettingsId } from '@user-office-software-libs/shared-types';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import React, { useContext, useMemo, useEffect, useState } from 'react';
@@ -14,7 +15,6 @@ import { Link, useLocation } from 'react-router-dom';
 
 import { SettingsContext } from 'context/SettingsContextProvider';
 import { UserContext } from 'context/UserContextProvider';
-import { SettingsId } from 'generated/sdk';
 
 import AccountActionButton from './AccountActionButton';
 const drawerWidth = 250;

@@ -4,9 +4,13 @@ import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import Typography from '@mui/material/Typography';
 import makeStyles from '@mui/styles/makeStyles';
+import {
+  Maybe,
+  Sep,
+  SepMeetingDecision,
+} from '@user-office-software-libs/shared-types';
 import React from 'react';
 
-import { Maybe, Sep, SepMeetingDecision } from 'generated/sdk';
 import { StyledPaper } from 'styles/StyledComponents';
 
 const useStyles = makeStyles((theme) => ({

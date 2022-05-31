@@ -1,3 +1,4 @@
+import { GenericTemplateBasisConfig } from '@user-office-software-libs/shared-types';
 import { Field } from 'formik';
 import { TextField } from 'formik-mui';
 import React, { ChangeEvent, useContext, useState } from 'react';
@@ -8,7 +9,6 @@ import {
   createMissingContextErrorMessage,
   QuestionaryContext,
 } from 'components/questionary/QuestionaryContext';
-import { GenericTemplateBasisConfig } from 'generated/sdk';
 import { SubmitActionDependencyContainer } from 'hooks/questionary/useSubmitActions';
 import { GenericTemplateSubmissionState } from 'models/questionary/genericTemplate/GenericTemplateSubmissionState';
 

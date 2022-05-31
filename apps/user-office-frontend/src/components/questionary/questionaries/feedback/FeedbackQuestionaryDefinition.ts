@@ -1,8 +1,13 @@
+import {
+  FeedbackStatus,
+  Sdk,
+  TemplateGroupId,
+} from '@user-office-software-libs/shared-types';
+
 import FeedbackReview from 'components/feedback/FeedbackReview';
 import { DefaultReviewWizardStep } from 'components/questionary/DefaultReviewWizardStep';
 import { DefaultStepDisplayElementFactory } from 'components/questionary/DefaultStepDisplayElementFactory';
 import { DefaultWizardStepFactory } from 'components/questionary/DefaultWizardStepFactory';
-import { FeedbackStatus, Sdk, TemplateGroupId } from 'generated/sdk';
 import { FeedbackSubmissionState } from 'models/questionary/feedback/FeedbackSubmissionState';
 import { ItemWithQuestionary } from 'models/questionary/QuestionarySubmissionState';
 

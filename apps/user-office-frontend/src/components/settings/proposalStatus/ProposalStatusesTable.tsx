@@ -1,5 +1,9 @@
 import Delete from '@mui/icons-material/DeleteOutline';
 import { Typography } from '@mui/material';
+import {
+  UserRole,
+  ProposalStatus,
+} from '@user-office-software-libs/shared-types';
 import React from 'react';
 import { useQueryParams } from 'use-query-params';
 
@@ -8,7 +12,6 @@ import SuperMaterialTable, {
   DefaultQueryParams,
   UrlQueryParamsType,
 } from 'components/common/SuperMaterialTable';
-import { UserRole, ProposalStatus } from 'generated/sdk';
 import { useProposalStatusesData } from 'hooks/settings/useProposalStatusesData';
 import { tableIcons } from 'utils/materialIcons';
 import useDataApiWithFeedback from 'utils/useDataApiWithFeedback';

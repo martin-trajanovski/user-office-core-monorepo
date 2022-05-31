@@ -6,6 +6,12 @@ import CssBaseline from '@mui/material/CssBaseline';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import { Editor } from '@tinymce/tinymce-react';
+import {
+  ReviewStatus,
+  ReviewWithNextProposalStatus,
+  Review,
+  UserRole,
+} from '@user-office-software-libs/shared-types';
 import { proposalGradeValidationSchema } from '@user-office-software/duo-validation/lib/Review';
 import { Field, Form, Formik, useFormikContext } from 'formik';
 import { Select, CheckboxWithLabel } from 'formik-mui';
@@ -18,12 +24,6 @@ import UOLoader from 'components/common/UOLoader';
 import GradeGuidePage from 'components/pages/GradeGuidePage';
 import NavigationFragment from 'components/questionary/NavigationFragment';
 import { ReviewAndAssignmentContext } from 'context/ReviewAndAssignmentContextProvider';
-import {
-  ReviewStatus,
-  ReviewWithNextProposalStatus,
-  Review,
-  UserRole,
-} from 'generated/sdk';
 import ButtonWithDialog from 'hooks/common/ButtonWithDialog';
 import useDataApiWithFeedback from 'utils/useDataApiWithFeedback';
 import { FunctionType } from 'utils/utilTypes';

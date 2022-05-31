@@ -1,6 +1,7 @@
 import GetAppIcon from '@mui/icons-material/GetApp';
 import { Link } from '@mui/material';
 import makeStyles from '@mui/styles/makeStyles';
+import { ShipmentStatus } from '@user-office-software-libs/shared-types';
 import React, { useContext } from 'react';
 
 import { NavigButton } from 'components/common/NavigButton';
@@ -13,7 +14,6 @@ import {
 import QuestionaryDetails, {
   TableRowData,
 } from 'components/questionary/QuestionaryDetails';
-import { ShipmentStatus } from 'generated/sdk';
 import { useDownloadPDFShipmentLabel } from 'hooks/proposal/useDownloadPDFShipmentLabel';
 import { useProposalData } from 'hooks/proposal/useProposalData';
 import useDataApiWithFeedback from 'utils/useDataApiWithFeedback';

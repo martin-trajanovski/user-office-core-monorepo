@@ -1,10 +1,10 @@
 import ShortTextIcon from '@mui/icons-material/ShortText';
+import { DataType } from '@user-office-software-libs/shared-types';
 import { textInputQuestionValidationSchema } from '@user-office-software/duo-validation';
 import React from 'react';
 
 import defaultRenderer from 'components/questionary/DefaultQuestionRenderer';
 import { QuestionaryComponentDefinition } from 'components/questionary/QuestionaryComponentRegistry';
-import { DataType } from 'generated/sdk';
 
 import { QuestionaryComponentTextInput } from './QuestionaryComponentTextInput';
 import { QuestionTemplateRelationTextInputForm } from './QuestionTemplateRelationTextInputForm';

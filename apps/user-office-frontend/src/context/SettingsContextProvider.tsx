@@ -1,7 +1,7 @@
 import makeStyles from '@mui/styles/makeStyles';
+import { Settings, SettingsId } from '@user-office-software-libs/shared-types';
 import React from 'react';
 
-import { Settings, SettingsId } from 'generated/sdk';
 import { useSettings } from 'hooks/admin/useSettings';
 
 interface SettingsContextData {

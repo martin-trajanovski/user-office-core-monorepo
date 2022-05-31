@@ -1,10 +1,13 @@
 import { MaterialTableProps } from '@material-table/core';
 import DoneIcon from '@mui/icons-material/Done';
 import makeStyles from '@mui/styles/makeStyles';
+import {
+  Template,
+  TemplateGroupId,
+} from '@user-office-software-libs/shared-types';
 import React from 'react';
 
 import UOLoader from 'components/common/UOLoader';
-import { Template, TemplateGroupId } from 'generated/sdk';
 import { useActiveTemplateId } from 'hooks/template/useActiveTemplateId';
 import useDataApiWithFeedback from 'utils/useDataApiWithFeedback';
 

@@ -1,5 +1,9 @@
 import FormControl from '@mui/material/FormControl';
 import Link from '@mui/material/Link';
+import {
+  SubTemplateConfig,
+  TemplateGroupId,
+} from '@user-office-software-libs/shared-types';
 import { Field } from 'formik';
 import { TextField } from 'formik-mui';
 import { default as React, FC } from 'react';
@@ -8,7 +12,6 @@ import * as Yup from 'yup';
 import FormikUIAutocomplete from 'components/common/FormikUIAutocomplete';
 import TitledContainer from 'components/common/TitledContainer';
 import { QuestionTemplateRelationFormProps } from 'components/questionary/QuestionaryComponentRegistry';
-import { SubTemplateConfig, TemplateGroupId } from 'generated/sdk';
 import { useTemplates } from 'hooks/template/useTemplates';
 
 import QuestionDependencyList from '../QuestionDependencyList';

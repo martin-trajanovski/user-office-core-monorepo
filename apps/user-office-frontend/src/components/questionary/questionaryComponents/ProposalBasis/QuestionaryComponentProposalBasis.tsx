@@ -1,4 +1,5 @@
 import makeStyles from '@mui/styles/makeStyles';
+import { BasicUserDetails } from '@user-office-software-libs/shared-types';
 import { Field } from 'formik';
 import { TextField } from 'formik-mui';
 import React, { ChangeEvent, useContext, useState } from 'react';
@@ -13,7 +14,6 @@ import {
   createMissingContextErrorMessage,
   QuestionaryContext,
 } from 'components/questionary/QuestionaryContext';
-import { BasicUserDetails } from 'generated/sdk';
 import { SubmitActionDependencyContainer } from 'hooks/questionary/useSubmitActions';
 import { ProposalSubmissionState } from 'models/questionary/proposal/ProposalSubmissionState';
 

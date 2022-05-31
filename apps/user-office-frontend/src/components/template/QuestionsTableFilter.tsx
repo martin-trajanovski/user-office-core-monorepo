@@ -6,10 +6,14 @@ import {
   TextField,
 } from '@mui/material';
 import makeStyles from '@mui/styles/makeStyles';
+import {
+  DataType,
+  QuestionsFilter,
+  TemplateCategoryId,
+} from '@user-office-software-libs/shared-types';
 import React, { useState } from 'react';
 
 import { creatableQuestions } from 'components/questionary/QuestionaryComponentRegistry';
-import { DataType, QuestionsFilter, TemplateCategoryId } from 'generated/sdk';
 import { useTemplateCategories } from 'hooks/template/useTemplateCategories';
 
 interface QuestionsTableFilterProps {

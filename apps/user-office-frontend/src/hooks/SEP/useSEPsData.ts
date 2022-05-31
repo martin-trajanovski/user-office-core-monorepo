@@ -1,6 +1,6 @@
+import { Sep, UserRole } from '@user-office-software-libs/shared-types';
 import { useEffect, useState, Dispatch, SetStateAction } from 'react';
 
-import { Sep, UserRole } from 'generated/sdk';
 import { useDataApi } from 'hooks/common/useDataApi';
 
 export function useSEPsData(

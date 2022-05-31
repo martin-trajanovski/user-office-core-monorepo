@@ -1,13 +1,13 @@
-import { useContext, useEffect, useState } from 'react';
-
-import { UserContext } from 'context/UserContextProvider';
 import {
   GetShipmentQuery,
   QuestionaryStep,
   ShipmentStatus,
   TemplateGroupId,
   User,
-} from 'generated/sdk';
+} from '@user-office-software-libs/shared-types';
+import { useContext, useEffect, useState } from 'react';
+
+import { UserContext } from 'context/UserContextProvider';
 import { useDataApi } from 'hooks/common/useDataApi';
 import { ShipmentWithQuestionary } from 'models/questionary/shipment/ShipmentWithQuestionary';
 

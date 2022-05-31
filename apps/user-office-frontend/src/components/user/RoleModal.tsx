@@ -1,8 +1,7 @@
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
+import { Role } from '@user-office-software-libs/shared-types';
 import React from 'react';
-
-import { Role } from 'generated/sdk';
 
 import RoleTable from './RoleTable';
 

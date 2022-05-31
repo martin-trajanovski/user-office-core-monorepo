@@ -1,6 +1,9 @@
+import {
+  GetTemplatesQuery,
+  TemplateGroupId,
+} from '@user-office-software-libs/shared-types';
 import { useEffect, useState } from 'react';
 
-import { GetTemplatesQuery, TemplateGroupId } from 'generated/sdk';
 import { useDataApi } from 'hooks/common/useDataApi';
 
 /**

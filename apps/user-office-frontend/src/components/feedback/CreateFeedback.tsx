@@ -1,12 +1,12 @@
-import React, { useContext, useEffect, useState } from 'react';
-
-import UOLoader from 'components/common/UOLoader';
-import { UserContext } from 'context/UserContextProvider';
 import {
   FeedbackStatus,
   QuestionaryStep,
   TemplateGroupId,
-} from 'generated/sdk';
+} from '@user-office-software-libs/shared-types';
+import React, { useContext, useEffect, useState } from 'react';
+
+import UOLoader from 'components/common/UOLoader';
+import { UserContext } from 'context/UserContextProvider';
 import { FeedbackWithQuestionary } from 'models/questionary/feedback/FeedbackWithQuestionary';
 import useDataApiWithFeedback from 'utils/useDataApiWithFeedback';
 

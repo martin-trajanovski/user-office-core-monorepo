@@ -1,12 +1,15 @@
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import {
+  TemplateGroupId,
+  TemplateMetadataFragment,
+} from '@user-office-software-libs/shared-types';
 import { createTemplateValidationSchema } from '@user-office-software/duo-validation/lib/Template';
 import { Field, Form, Formik } from 'formik';
 import { TextField } from 'formik-mui';
 import { useSnackbar } from 'notistack';
 import React from 'react';
 
-import { TemplateGroupId, TemplateMetadataFragment } from 'generated/sdk';
 import useDataApiWithFeedback from 'utils/useDataApiWithFeedback';
 
 const CreateTemplate = (props: {

@@ -1,5 +1,12 @@
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import {
+  CoreTechnicalReviewFragment,
+  Proposal,
+  Review,
+  TechnicalReview,
+  UserRole,
+} from '@user-office-software-libs/shared-types';
 import React, { Fragment, useContext } from 'react';
 
 import { useCheckAccess } from 'components/common/Can';
@@ -13,13 +20,6 @@ import ProposalAdmin, {
 import ExternalReviews from 'components/SEP/MeetingComponents/ProposalViewModal/ExternalReviews';
 import SEPMeetingDecision from 'components/SEP/MeetingComponents/ProposalViewModal/SEPMeetingDecision';
 import { UserContext } from 'context/UserContextProvider';
-import {
-  CoreTechnicalReviewFragment,
-  Proposal,
-  Review,
-  TechnicalReview,
-  UserRole,
-} from 'generated/sdk';
 import { useProposalData } from 'hooks/proposal/useProposalData';
 import { useReviewData } from 'hooks/review/useReviewData';
 import { StyledPaper } from 'styles/StyledComponents';

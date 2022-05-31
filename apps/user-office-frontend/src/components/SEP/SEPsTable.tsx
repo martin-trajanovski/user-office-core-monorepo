@@ -1,5 +1,6 @@
 import Edit from '@mui/icons-material/Edit';
 import { Typography } from '@mui/material';
+import { Sep, UserRole } from '@user-office-software-libs/shared-types';
 import React, { useContext, useState } from 'react';
 import { Redirect, useHistory } from 'react-router';
 import { useQueryParams } from 'use-query-params';
@@ -10,7 +11,6 @@ import SuperMaterialTable, {
   UrlQueryParamsType,
 } from 'components/common/SuperMaterialTable';
 import { UserContext } from 'context/UserContextProvider';
-import { Sep, UserRole } from 'generated/sdk';
 import { useSEPsData } from 'hooks/SEP/useSEPsData';
 import { tableIcons } from 'utils/materialIcons';
 import useDataApiWithFeedback from 'utils/useDataApiWithFeedback';

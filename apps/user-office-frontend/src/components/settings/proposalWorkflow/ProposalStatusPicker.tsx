@@ -3,6 +3,7 @@ import Grid from '@mui/material/Grid';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import makeStyles from '@mui/styles/makeStyles';
 import useTheme from '@mui/styles/useTheme';
+import { ProposalStatus } from '@user-office-software-libs/shared-types';
 import React from 'react';
 import {
   Draggable,
@@ -10,8 +11,6 @@ import {
   Droppable,
   NotDraggingStyle,
 } from 'react-beautiful-dnd';
-
-import { ProposalStatus } from 'generated/sdk';
 
 const ProposalStatusPicker: React.FC<{
   proposalStatuses: ProposalStatus[];

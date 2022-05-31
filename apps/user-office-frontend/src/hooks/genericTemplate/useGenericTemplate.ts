@@ -1,8 +1,7 @@
+import { GenericTemplateFragment } from '@user-office-software-libs/shared-types';
 import { useEffect, useState } from 'react';
 
 import { useDataApi } from 'hooks/common/useDataApi';
-
-import { GenericTemplateFragment } from '../../generated/sdk';
 
 export function useGenericTemplate(genericTemplateId: number) {
   const [genericTemplate, setGenericTemplate] =

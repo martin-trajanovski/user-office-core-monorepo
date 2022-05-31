@@ -2,6 +2,10 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import makeStyles from '@mui/styles/makeStyles';
 import {
+  InstrumentFragment,
+  UserRole,
+} from '@user-office-software-libs/shared-types';
+import {
   createInstrumentValidationSchema,
   updateInstrumentValidationSchema,
 } from '@user-office-software/duo-validation/lib/Instrument';
@@ -12,7 +16,6 @@ import React from 'react';
 
 import FormikUIAutocomplete from 'components/common/FormikUIAutocomplete';
 import UOLoader from 'components/common/UOLoader';
-import { InstrumentFragment, UserRole } from 'generated/sdk';
 import { useUsersData } from 'hooks/user/useUsersData';
 import useDataApiWithFeedback from 'utils/useDataApiWithFeedback';
 import { getFullUserName } from 'utils/user';

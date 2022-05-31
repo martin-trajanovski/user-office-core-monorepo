@@ -1,9 +1,9 @@
 import MaterialTable from '@material-table/core';
 import Button from '@mui/material/Button';
+import { Role } from '@user-office-software-libs/shared-types';
 import React, { useState } from 'react';
 
 import { ActionButtonContainer } from 'components/common/ActionButtonContainer';
-import { Role } from 'generated/sdk';
 import { useRolesData } from 'hooks/user/useRolesData';
 import { tableIcons } from 'utils/materialIcons';
 

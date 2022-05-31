@@ -1,3 +1,3 @@
-import { ShipmentFragment } from 'generated/sdk';
+import { ShipmentFragment } from '@user-office-software-libs/shared-types';
 
 export type ShipmentCore = ShipmentFragment;

@@ -16,13 +16,12 @@ import {
   TableRow,
 } from '@mui/material';
 import makeStyles from '@mui/styles/makeStyles';
-import clsx from 'clsx';
-import React, { useEffect } from 'react';
-
 import {
   ConflictResolutionStrategy,
   QuestionComparisonStatus,
-} from 'generated/sdk';
+} from '@user-office-software-libs/shared-types';
+import clsx from 'clsx';
+import React, { useEffect } from 'react';
 
 const useStyles = makeStyles((theme) => ({
   heading: {

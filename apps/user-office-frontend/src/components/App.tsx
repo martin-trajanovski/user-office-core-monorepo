@@ -1,6 +1,7 @@
 import Close from '@mui/icons-material/Close';
 import IconButton from '@mui/material/IconButton';
 import { StyledEngineProvider } from '@mui/material/styles';
+import { FeatureId, SettingsId } from '@user-office-software-libs/shared-types';
 import { SnackbarProvider } from 'notistack';
 import React, { ErrorInfo, useContext } from 'react';
 import { CookiesProvider } from 'react-cookie';
@@ -20,7 +21,6 @@ import { ReviewAndAssignmentContextProvider } from 'context/ReviewAndAssignmentC
 import { SettingsContextProvider } from 'context/SettingsContextProvider';
 import { SettingsContext } from 'context/SettingsContextProvider';
 import { UserContext, UserContextProvider } from 'context/UserContextProvider';
-import { FeatureId, SettingsId } from 'generated/sdk';
 import { getUnauthorizedApi } from 'hooks/common/useDataApi';
 
 import { getPingAuthTokenFromCallbackUrl } from '../utils/getPingAuthTokenFromCallbackUrl';

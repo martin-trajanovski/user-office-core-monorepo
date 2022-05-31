@@ -1,10 +1,10 @@
 import Box from '@mui/material/Box';
 import { TableProps } from '@mui/material/Table';
 import Typography from '@mui/material/Typography';
+import { Answer, DataType } from '@user-office-software-libs/shared-types';
 import React, { FC } from 'react';
 
 import UOLoader from 'components/common/UOLoader';
-import { Answer, DataType } from 'generated/sdk';
 import { useQuestionary } from 'hooks/questionary/useQuestionary';
 import { areDependenciesSatisfied } from 'models/questionary/QuestionaryFunctions';
 

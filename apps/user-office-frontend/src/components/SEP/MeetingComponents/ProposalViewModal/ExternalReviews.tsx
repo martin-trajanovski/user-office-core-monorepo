@@ -5,10 +5,10 @@ import TableContainer from '@mui/material/TableContainer';
 import TableRow from '@mui/material/TableRow';
 import Typography from '@mui/material/Typography';
 import makeStyles from '@mui/styles/makeStyles';
+import { Review } from '@user-office-software-libs/shared-types';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import { Review } from 'generated/sdk';
 import { StyledPaper } from 'styles/StyledComponents';
 import { getFullUserName } from 'utils/user';
 

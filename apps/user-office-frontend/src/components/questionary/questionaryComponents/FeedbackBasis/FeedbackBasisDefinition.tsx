@@ -1,7 +1,6 @@
 import FeedbackIcon from '@mui/icons-material/Feedback';
+import { DataType } from '@user-office-software-libs/shared-types';
 import React from 'react';
-
-import { DataType } from 'generated/sdk';
 
 import { QuestionaryComponentDefinition } from '../../QuestionaryComponentRegistry';
 import { QuestionaryComponentFeedbackBasis } from './QuestionaryComponentFeedbackBasis';

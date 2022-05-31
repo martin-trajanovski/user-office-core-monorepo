@@ -9,13 +9,6 @@ import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import makeStyles from '@mui/styles/makeStyles';
-import { Formik } from 'formik';
-import React, { useState, useEffect, useContext } from 'react';
-
-import { ActionButtonContainer } from 'components/common/ActionButtonContainer';
-import EmailSearchBar from 'components/common/EmailSearchBar';
-import { FeatureContext } from 'context/FeatureContextProvider';
-import { getCurrentUser } from 'context/UserContextProvider';
 import {
   BasicUserDetails,
   FeatureId,
@@ -25,7 +18,14 @@ import {
   UserRole,
   Maybe,
   getSdk,
-} from 'generated/sdk';
+} from '@user-office-software-libs/shared-types';
+import { Formik } from 'formik';
+import React, { useState, useEffect, useContext } from 'react';
+
+import { ActionButtonContainer } from 'components/common/ActionButtonContainer';
+import EmailSearchBar from 'components/common/EmailSearchBar';
+import { FeatureContext } from 'context/FeatureContextProvider';
+import { getCurrentUser } from 'context/UserContextProvider';
 import { useDataApi } from 'hooks/common/useDataApi';
 import { useUsersData } from 'hooks/user/useUsersData';
 import { tableIcons } from 'utils/materialIcons';

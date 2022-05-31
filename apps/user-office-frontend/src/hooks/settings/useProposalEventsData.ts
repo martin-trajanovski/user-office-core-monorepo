@@ -1,6 +1,6 @@
+import { ProposalEvent } from '@user-office-software-libs/shared-types';
 import { useEffect, useState, SetStateAction, Dispatch } from 'react';
 
-import { ProposalEvent } from 'generated/sdk';
 import { useDataApi } from 'hooks/common/useDataApi';
 
 export function useProposalEventsData(): {

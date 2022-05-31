@@ -3,13 +3,13 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import makeStyles from '@mui/styles/makeStyles';
+import { Call } from '@user-office-software-libs/shared-types';
 import { Form, Formik } from 'formik';
 import PropTypes from 'prop-types';
 import React from 'react';
 import * as yup from 'yup';
 
 import FormikUIAutocomplete from 'components/common/FormikUIAutocomplete';
-import { Call } from 'generated/sdk';
 import { useCallsData } from 'hooks/call/useCallsData';
 
 const callSelectModalOnProposalsCloneValidationSchema = yup.object().shape({

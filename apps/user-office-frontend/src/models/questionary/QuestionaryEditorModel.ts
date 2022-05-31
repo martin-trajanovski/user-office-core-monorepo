@@ -1,15 +1,15 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import produce from 'immer';
-import { Reducer, useCallback, useEffect } from 'react';
-import { useParams } from 'react-router';
-
 import {
   Question,
   Template,
   TemplateCategoryId,
   TemplateGroupId,
   TemplateStep,
-} from 'generated/sdk';
+} from '@user-office-software-libs/shared-types';
+import produce from 'immer';
+import { Reducer, useCallback, useEffect } from 'react';
+import { useParams } from 'react-router';
+
 import { useDataApi } from 'hooks/common/useDataApi';
 import {
   getFieldById,

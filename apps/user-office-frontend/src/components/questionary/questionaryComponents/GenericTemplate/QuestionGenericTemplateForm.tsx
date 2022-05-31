@@ -1,5 +1,6 @@
 import FormControl from '@mui/material/FormControl';
 import Link from '@mui/material/Link';
+import { TemplateGroupId } from '@user-office-software-libs/shared-types';
 import { Field } from 'formik';
 import { TextField } from 'formik-mui';
 import React, { FC } from 'react';
@@ -8,7 +9,6 @@ import * as Yup from 'yup';
 import FormikUIAutocomplete from 'components/common/FormikUIAutocomplete';
 import TitledContainer from 'components/common/TitledContainer';
 import { QuestionFormProps } from 'components/questionary/QuestionaryComponentRegistry';
-import { TemplateGroupId } from 'generated/sdk';
 import { useActiveTemplates } from 'hooks/call/useCallTemplates';
 import { useNaturalKeySchema } from 'utils/userFieldValidationSchema';
 

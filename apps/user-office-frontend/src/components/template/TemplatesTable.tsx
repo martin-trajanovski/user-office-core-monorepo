@@ -12,12 +12,16 @@ import ShareIcon from '@mui/icons-material/Share';
 import UnarchiveIcon from '@mui/icons-material/Unarchive';
 import { Typography } from '@mui/material';
 import Button from '@mui/material/Button';
+import {
+  GetTemplatesQuery,
+  Template,
+  TemplateGroupId,
+} from '@user-office-software-libs/shared-types';
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router';
 
 import { ActionButtonContainer } from 'components/common/ActionButtonContainer';
 import InputDialog from 'components/common/InputDialog';
-import { GetTemplatesQuery, Template, TemplateGroupId } from 'generated/sdk';
 import { downloadBlob } from 'utils/downloadBlob';
 import { tableIcons } from 'utils/materialIcons';
 import useDataApiWithFeedback from 'utils/useDataApiWithFeedback';

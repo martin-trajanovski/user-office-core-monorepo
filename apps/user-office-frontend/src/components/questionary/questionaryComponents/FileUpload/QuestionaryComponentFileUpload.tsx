@@ -1,6 +1,7 @@
 import FormControl from '@mui/material/FormControl';
 import FormHelperText from '@mui/material/FormHelperText';
 import FormLabel from '@mui/material/FormLabel';
+import { FileUploadConfig } from '@user-office-software-libs/shared-types';
 import React, { useEffect, useState } from 'react';
 
 import {
@@ -8,7 +9,6 @@ import {
   FileUploadComponent,
 } from 'components/common/FileUploadComponent';
 import { BasicComponentProps } from 'components/proposal/IBasicComponentProps';
-import { FileUploadConfig } from 'generated/sdk';
 
 export function QuestionaryComponentFileUpload(
   props: BasicComponentProps & { files?: string[] }

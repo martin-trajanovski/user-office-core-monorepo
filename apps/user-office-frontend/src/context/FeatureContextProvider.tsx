@@ -1,7 +1,7 @@
 import makeStyles from '@mui/styles/makeStyles';
+import { Feature, FeatureId } from '@user-office-software-libs/shared-types';
 import React from 'react';
 
-import { Feature, FeatureId } from 'generated/sdk';
 import { useFeatures } from 'hooks/admin/useFeatures';
 
 interface FeatureContextData {

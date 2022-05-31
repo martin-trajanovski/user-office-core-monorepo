@@ -11,6 +11,16 @@ import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
+import {
+  Call,
+  Proposal,
+  ProposalsFilter,
+  ProposalStatus,
+  ProposalPkWithCallId,
+  Sep,
+  InstrumentFragment,
+  FeatureId,
+} from '@user-office-software-libs/shared-types';
 import React, { useContext, useEffect, useState } from 'react';
 import isEqual from 'react-fast-compare';
 import { DecodedValueMap, SetQuery } from 'use-query-params';
@@ -24,16 +34,6 @@ import ProposalReviewContent, {
 import ProposalReviewModal from 'components/review/ProposalReviewModal';
 import AssignProposalsToSEP from 'components/SEP/Proposals/AssignProposalsToSEP';
 import { FeatureContext } from 'context/FeatureContextProvider';
-import {
-  Call,
-  Proposal,
-  ProposalsFilter,
-  ProposalStatus,
-  ProposalPkWithCallId,
-  Sep,
-  InstrumentFragment,
-  FeatureId,
-} from 'generated/sdk';
 import { useLocalStorage } from 'hooks/common/useLocalStorage';
 import { useDownloadPDFProposal } from 'hooks/proposal/useDownloadPDFProposal';
 import { useDownloadXLSXProposal } from 'hooks/proposal/useDownloadXLSXProposal';

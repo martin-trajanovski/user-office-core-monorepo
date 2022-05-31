@@ -1,6 +1,6 @@
+import { GetOrcIdInformationQuery } from '@user-office-software-libs/shared-types';
 import { useEffect, useState } from 'react';
 
-import { GetOrcIdInformationQuery } from 'generated/sdk';
 import { getUnauthorizedApi } from 'hooks/common/useDataApi';
 
 export function useOrcIDInformation(authorizationCode?: string | null) {

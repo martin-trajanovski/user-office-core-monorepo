@@ -1,5 +1,10 @@
 import FormControl from '@mui/material/FormControl';
 import Link from '@mui/material/Link';
+import {
+  FeatureId,
+  SampleDeclarationConfig,
+  TemplateGroupId,
+} from '@user-office-software-libs/shared-types';
 import { Field } from 'formik';
 import { TextField } from 'formik-mui';
 import { ChangeEvent, default as React, FC, useContext } from 'react';
@@ -9,11 +14,6 @@ import FormikUIAutocomplete from 'components/common/FormikUIAutocomplete';
 import TitledContainer from 'components/common/TitledContainer';
 import { QuestionTemplateRelationFormProps } from 'components/questionary/QuestionaryComponentRegistry';
 import { FeatureContext } from 'context/FeatureContextProvider';
-import {
-  FeatureId,
-  SampleDeclarationConfig,
-  TemplateGroupId,
-} from 'generated/sdk';
 import { useActiveTemplates } from 'hooks/call/useCallTemplates';
 
 import QuestionDependencyList from '../QuestionDependencyList';

@@ -1,7 +1,7 @@
 import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
+import { DataType } from '@user-office-software-libs/shared-types';
 import React from 'react';
 
-import { DataType } from 'generated/sdk';
 import { VisitRegistrationSubmissionState } from 'models/questionary/visit/VisitRegistrationSubmissionState';
 
 import { QuestionaryComponentDefinition } from '../../QuestionaryComponentRegistry';

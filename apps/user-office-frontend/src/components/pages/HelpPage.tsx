@@ -1,7 +1,7 @@
+import { PageName } from '@user-office-software-libs/shared-types';
 import parse from 'html-react-parser';
 import React from 'react';
 
-import { PageName } from 'generated/sdk';
 import { useGetPageContent } from 'hooks/admin/useGetPageContent';
 import { StyledContainer, StyledPaper } from 'styles/StyledComponents';
 

@@ -1,7 +1,7 @@
+import { DataType } from '@user-office-software-libs/shared-types';
 import React from 'react';
 
 import EsiIcon from 'components/common/icons/EsiIcon';
-import { DataType } from 'generated/sdk';
 import { SampleEsiSubmissionState } from 'models/questionary/sampleEsi/SampleEsiSubmissionState';
 
 import { QuestionaryComponentDefinition } from '../../QuestionaryComponentRegistry';

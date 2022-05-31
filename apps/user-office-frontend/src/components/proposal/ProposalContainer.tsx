@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-use-before-define */
 import { PaperProps, Typography } from '@mui/material';
+import { TemplateGroupId } from '@user-office-software-libs/shared-types';
 import { default as React, useState } from 'react';
 
 import CopyToClipboard from 'components/common/CopyToClipboard';
@@ -8,7 +9,6 @@ import {
   QuestionaryContext,
   QuestionaryContextType,
 } from 'components/questionary/QuestionaryContext';
-import { TemplateGroupId } from 'generated/sdk';
 import createCustomEventHandlers from 'models/questionary/createCustomEventHandlers';
 import { ProposalSubmissionState } from 'models/questionary/proposal/ProposalSubmissionState';
 import { ProposalWithQuestionary } from 'models/questionary/proposal/ProposalWithQuestionary';

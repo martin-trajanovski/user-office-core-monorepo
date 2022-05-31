@@ -1,6 +1,6 @@
+import { SepProposal, Proposal } from '@user-office-software-libs/shared-types';
 import { useEffect, useState, Dispatch, SetStateAction } from 'react';
 
-import { SepProposal, Proposal } from 'generated/sdk';
 import { useDataApi } from 'hooks/common/useDataApi';
 
 export type SepProposalBasics = Pick<

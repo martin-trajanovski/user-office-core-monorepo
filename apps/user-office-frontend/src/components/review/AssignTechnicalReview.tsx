@@ -1,9 +1,9 @@
 import { Button, TextField, Autocomplete, Grid } from '@mui/material';
 import makeStyles from '@mui/styles/makeStyles';
+import { UserRole } from '@user-office-software-libs/shared-types';
 import React, { useState } from 'react';
 
 import { useCheckAccess } from 'components/common/Can';
-import { UserRole } from 'generated/sdk';
 import { ProposalData } from 'hooks/proposal/useProposalData';
 import useDataApiWithFeedback from 'utils/useDataApiWithFeedback';
 import { getFullUserName } from 'utils/user';

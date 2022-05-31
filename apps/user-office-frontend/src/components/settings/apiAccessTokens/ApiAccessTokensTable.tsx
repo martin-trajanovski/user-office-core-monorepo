@@ -1,4 +1,8 @@
 import { Typography } from '@mui/material';
+import {
+  UserRole,
+  PermissionsWithAccessToken,
+} from '@user-office-software-libs/shared-types';
 import React from 'react';
 import { useQueryParams } from 'use-query-params';
 
@@ -7,7 +11,6 @@ import SuperMaterialTable, {
   DefaultQueryParams,
   UrlQueryParamsType,
 } from 'components/common/SuperMaterialTable';
-import { UserRole, PermissionsWithAccessToken } from 'generated/sdk';
 import { useApiAccessTokensData } from 'hooks/admin/useApiAccessTokensData';
 import { tableIcons } from 'utils/materialIcons';
 import useDataApiWithFeedback from 'utils/useDataApiWithFeedback';

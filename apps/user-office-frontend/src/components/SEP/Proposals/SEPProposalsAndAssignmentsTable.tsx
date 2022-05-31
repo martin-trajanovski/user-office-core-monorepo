@@ -7,6 +7,15 @@ import { IconButton, Tooltip, Typography } from '@mui/material';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import Grid from '@mui/material/Grid';
+import {
+  SepAssignment,
+  UserRole,
+  ReviewWithNextProposalStatus,
+  ProposalStatus,
+  Review,
+  SettingsId,
+  Sep,
+} from '@user-office-software-libs/shared-types';
 import { DateTime } from 'luxon';
 import React, { useState } from 'react';
 import { NumberParam, useQueryParams } from 'use-query-params';
@@ -16,15 +25,6 @@ import ProposalReviewContent, {
   PROPOSAL_MODAL_TAB_NAMES,
 } from 'components/review/ProposalReviewContent';
 import ProposalReviewModal from 'components/review/ProposalReviewModal';
-import {
-  SepAssignment,
-  UserRole,
-  ReviewWithNextProposalStatus,
-  ProposalStatus,
-  Review,
-  SettingsId,
-  Sep,
-} from 'generated/sdk';
 import { useFormattedDateTime } from 'hooks/admin/useFormattedDateTime';
 import { useDownloadPDFProposal } from 'hooks/proposal/useDownloadPDFProposal';
 import {

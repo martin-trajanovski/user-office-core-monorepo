@@ -1,5 +1,6 @@
+import { ShipmentStatus } from '@user-office-software-libs/shared-types';
+
 import { QuestionaryWizardStep } from 'components/questionary/DefaultWizardStepFactory';
-import { ShipmentStatus } from 'generated/sdk';
 import { QuestionarySubmissionState } from 'models/questionary/QuestionarySubmissionState';
 import { ShipmentSubmissionState } from 'models/questionary/shipment/ShipmentSubmissionState';
 

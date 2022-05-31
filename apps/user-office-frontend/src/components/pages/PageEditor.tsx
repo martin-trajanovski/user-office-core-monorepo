@@ -1,7 +1,7 @@
+import { PageName } from '@user-office-software-libs/shared-types';
 import React from 'react';
 
 import SimpleTabs from 'components/common/TabPanel';
-import { PageName } from 'generated/sdk';
 import { StyledContainer, StyledPaper } from 'styles/StyledComponents';
 
 import PageInputBox from './PageInputBox';

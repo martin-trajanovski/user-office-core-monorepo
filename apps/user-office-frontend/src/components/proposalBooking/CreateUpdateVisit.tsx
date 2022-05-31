@@ -1,4 +1,5 @@
 import { Button, Typography } from '@mui/material';
+import { BasicUserDetails } from '@user-office-software-libs/shared-types';
 import { Form, Formik } from 'formik';
 import React from 'react';
 import * as Yup from 'yup';
@@ -7,7 +8,6 @@ import { ActionButtonContainer } from 'components/common/ActionButtonContainer';
 import ErrorMessage from 'components/common/ErrorMessage';
 import FormikUIAutocomplete from 'components/common/FormikUIAutocomplete';
 import Participants from 'components/proposal/ProposalParticipants';
-import { BasicUserDetails } from 'generated/sdk';
 import useDataApiWithFeedback from 'utils/useDataApiWithFeedback';
 import { getFullUserName } from 'utils/user';
 

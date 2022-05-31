@@ -15,14 +15,16 @@
     "build": "concurrently \"npm run build:backend\" \"npm run build:frontend\"",
     "build:backend": "cd apps/user-office-backend && npm run build",
     "build:frontend": "cd apps/user-office-frontend && npm run build",
-    "install": "concurrently \"npm run install:backend\" \"npm run install:frontend\" \"npm run install:libs:shared-types\"",
+    "install": "concurrently \"npm run install:backend\" \"npm run install:frontend\" \"npm run install:libs:shared-types\" \"npm run install:user-office-frontend-e2e\"",
     "install:backend": "cd apps/user-office-backend && npm install",
     "install:frontend": "cd apps/user-office-frontend && npm install",
     "install:libs:shared-types": "cd libs/shared-types && npm install",
+    "install:user-office-frontend-e2e": "cd apps/user-office-frontend-e2e && npm install",
     "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
     "dev:backend": "cd apps/user-office-backend && npm run dev",
     "dev:frontend": "cd apps/user-office-frontend && npm run dev",
-    "generate:shared:types": "cd libs/shared-types && node scripts/generate-graphql-sdk.js"
+    "generate:shared:types": "cd libs/shared-types && node scripts/generate-graphql-sdk.js",
+    "e2e:after:dev": "concurrently --kill-others --success last \"npm run dev\" \"wait-on http://localhost:3000 && cd apps/user-office-frontend-e2e && npm run cy:run:action\""
   },
   "keywords": [
     "duo",
@@ -31,6 +33,7 @@
     "monorepo"
   ],
   "dependencies": {
-    "concurrently": "^7.2.1"
+    "concurrently": "^7.2.1",
+    "wait-on": "^6.0.1"
   }
 }

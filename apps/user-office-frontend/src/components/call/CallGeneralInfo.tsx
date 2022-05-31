@@ -21,13 +21,6 @@ import {
   useTheme,
 } from '@mui/material';
 import withStyles from '@mui/styles/withStyles';
-import { Field, useFormikContext } from 'formik';
-import { TextField } from 'formik-mui';
-import { DateTimePicker } from 'formik-mui-lab';
-import React, { useContext } from 'react';
-
-import FormikUIAutocomplete from 'components/common/FormikUIAutocomplete';
-import { FeatureContext } from 'context/FeatureContextProvider';
 import {
   AllocationTimeUnits,
   CreateCallMutationVariables,
@@ -35,7 +28,14 @@ import {
   GetTemplatesQuery,
   ProposalWorkflow,
   UpdateCallMutationVariables,
-} from 'generated/sdk';
+} from '@user-office-software-libs/shared-types';
+import { Field, useFormikContext } from 'formik';
+import { TextField } from 'formik-mui';
+import { DateTimePicker } from 'formik-mui-lab';
+import React, { useContext } from 'react';
+
+import FormikUIAutocomplete from 'components/common/FormikUIAutocomplete';
+import { FeatureContext } from 'context/FeatureContextProvider';
 import { useFormattedDateTime } from 'hooks/admin/useFormattedDateTime';
 
 const CallGeneralInfo: React.FC<{

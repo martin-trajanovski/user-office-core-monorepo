@@ -5,6 +5,12 @@ import RateReviewIcon from '@mui/icons-material/RateReview';
 import Visibility from '@mui/icons-material/Visibility';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
+import {
+  ReviewerFilter,
+  ReviewStatus,
+  SepAssignment,
+  UserWithReviewsQuery,
+} from '@user-office-software-libs/shared-types';
 import { proposalGradeValidationSchema } from '@user-office-software/duo-validation';
 import React, { useState, useContext, useEffect } from 'react';
 import { useQueryParams, NumberParam } from 'use-query-params';
@@ -13,12 +19,6 @@ import CallFilter from 'components/common/proposalFilters/CallFilter';
 import InstrumentFilter from 'components/common/proposalFilters/InstrumentFilter';
 import { DefaultQueryParams } from 'components/common/SuperMaterialTable';
 import { ReviewAndAssignmentContext } from 'context/ReviewAndAssignmentContextProvider';
-import {
-  ReviewerFilter,
-  ReviewStatus,
-  SepAssignment,
-  UserWithReviewsQuery,
-} from 'generated/sdk';
 import { useCallsData } from 'hooks/call/useCallsData';
 import { useInstrumentsData } from 'hooks/instrument/useInstrumentsData';
 import { useDownloadPDFProposal } from 'hooks/proposal/useDownloadPDFProposal';

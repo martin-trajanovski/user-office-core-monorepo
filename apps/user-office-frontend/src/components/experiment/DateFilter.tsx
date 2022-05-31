@@ -2,11 +2,11 @@ import { DatePicker, LocalizationProvider } from '@mui/lab';
 import DateAdapter from '@mui/lab/AdapterLuxon';
 import { Stack, TextField } from '@mui/material';
 import { makeStyles } from '@mui/styles';
+import { SettingsId } from '@user-office-software-libs/shared-types';
 import { DateTime } from 'luxon';
 import React from 'react';
 import { DateParam, useQueryParams } from 'use-query-params';
 
-import { SettingsId } from 'generated/sdk';
 import { useFormattedDateTime } from 'hooks/admin/useFormattedDateTime';
 
 import PresetDateSelector, { TimeSpan } from './PresetDateSelector';

@@ -1,9 +1,9 @@
 import MaterialTable from '@material-table/core';
 import { Typography } from '@mui/material';
+import { EventLog } from '@user-office-software-libs/shared-types';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import { EventLog } from 'generated/sdk';
 import { useFormattedDateTime } from 'hooks/admin/useFormattedDateTime';
 import { useEventLogsData } from 'hooks/eventLog/useEventLogsData';
 import { tableIcons } from 'utils/materialIcons';

@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-use-before-define */
+import { TemplateGroupId } from '@user-office-software-libs/shared-types';
 import { default as React, useState } from 'react';
 
 import Questionary from 'components/questionary/Questionary';
@@ -6,7 +7,6 @@ import {
   QuestionaryContext,
   QuestionaryContextType,
 } from 'components/questionary/QuestionaryContext';
-import { TemplateGroupId } from 'generated/sdk';
 import createCustomEventHandlers from 'models/questionary/createCustomEventHandlers';
 import {
   Event,

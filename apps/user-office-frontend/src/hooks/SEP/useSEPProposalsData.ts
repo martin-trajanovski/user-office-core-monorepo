@@ -1,6 +1,6 @@
+import { GetSepProposalsQuery } from '@user-office-software-libs/shared-types';
 import { useEffect, useState, Dispatch, SetStateAction } from 'react';
 
-import { GetSepProposalsQuery } from 'generated/sdk';
 import { useDataApi } from 'hooks/common/useDataApi';
 import { Unpacked } from 'utils/utilTypes';
 

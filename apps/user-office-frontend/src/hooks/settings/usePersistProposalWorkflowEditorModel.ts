@@ -1,10 +1,14 @@
+import {
+  IndexWithGroupId,
+  ProposalWorkflow,
+  Rejection,
+} from '@user-office-software-libs/shared-types';
 import { useState } from 'react';
 
 import {
   Event,
   EventType,
 } from 'components/settings/proposalWorkflow/ProposalWorkflowEditorModel';
-import { IndexWithGroupId, ProposalWorkflow, Rejection } from 'generated/sdk';
 import useDataApiWithFeedback from 'utils/useDataApiWithFeedback';
 import { MiddlewareInputParams } from 'utils/useReducerWithMiddleWares';
 import { FunctionType } from 'utils/utilTypes';

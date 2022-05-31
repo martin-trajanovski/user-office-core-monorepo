@@ -10,19 +10,19 @@ import {
   Typography,
 } from '@mui/material';
 import makeStyles from '@mui/styles/makeStyles';
-import { Formik } from 'formik';
-import React, { useState, useEffect, useContext } from 'react';
-
-import { ActionButtonContainer } from 'components/common/ActionButtonContainer';
-import EmailSearchBar from 'components/common/EmailSearchBar';
-import { FeatureContext } from 'context/FeatureContextProvider';
 import {
   BasicUserDetails,
   UserRole,
   GetBasicUserDetailsByEmailQuery,
   GetUsersQueryVariables,
   FeatureId,
-} from 'generated/sdk';
+} from '@user-office-software-libs/shared-types';
+import { Formik } from 'formik';
+import React, { useState, useEffect, useContext } from 'react';
+
+import { ActionButtonContainer } from 'components/common/ActionButtonContainer';
+import EmailSearchBar from 'components/common/EmailSearchBar';
+import { FeatureContext } from 'context/FeatureContextProvider';
 import { useDataApi } from 'hooks/common/useDataApi';
 import { usePrevColabs } from 'hooks/user/usePrevColabs';
 import { tableIcons } from 'utils/materialIcons';

@@ -3,12 +3,15 @@ import Button from '@mui/material/Button';
 import FormControl from '@mui/material/FormControl';
 import Typography from '@mui/material/Typography';
 import makeStyles from '@mui/styles/makeStyles';
+import {
+  BasicUserDetails,
+  UserRole,
+} from '@user-office-software-libs/shared-types';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 
 import { ActionButtonContainer } from 'components/common/ActionButtonContainer';
 import PeopleTable from 'components/user/PeopleTable';
-import { BasicUserDetails, UserRole } from 'generated/sdk';
 
 import ParticipantModal from './ParticipantModal';
 

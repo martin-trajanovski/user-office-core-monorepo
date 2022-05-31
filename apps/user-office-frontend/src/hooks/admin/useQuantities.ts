@@ -1,6 +1,6 @@
+import { Quantity } from '@user-office-software-libs/shared-types';
 import { useEffect, useState } from 'react';
 
-import { Quantity } from 'generated/sdk';
 import { useDataApi } from 'hooks/common/useDataApi';
 
 export function useQuantities(): {

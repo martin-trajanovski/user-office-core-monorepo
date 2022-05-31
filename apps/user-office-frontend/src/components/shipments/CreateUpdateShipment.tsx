@@ -1,6 +1,6 @@
+import { ShipmentFragment } from '@user-office-software-libs/shared-types';
 import React from 'react';
 
-import { ShipmentFragment } from 'generated/sdk';
 import { ShipmentCore } from 'models/questionary/shipment/ShipmentCore';
 
 import CreateShipment from './CreateShipment';

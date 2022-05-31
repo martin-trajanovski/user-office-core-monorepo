@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { Role, UserRole, User } from '@user-office-software-libs/shared-types';
 import jwtDecode from 'jwt-decode';
 import PropTypes from 'prop-types';
 import React, { useCallback, useEffect } from 'react';
 import { useCookies } from 'react-cookie';
 
-import { Role, UserRole, User } from 'generated/sdk';
 import { useUnauthorizedApi } from 'hooks/common/useDataApi';
 
 export type BasicUser = Pick<User, 'id' | 'email'>;

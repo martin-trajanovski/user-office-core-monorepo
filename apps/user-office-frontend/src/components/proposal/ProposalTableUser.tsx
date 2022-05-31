@@ -1,11 +1,11 @@
-import React, { useCallback, useState } from 'react';
-
 import {
   Call,
   Maybe,
   ProposalPublicStatus,
   ProposalStatus,
-} from 'generated/sdk';
+} from '@user-office-software-libs/shared-types';
+import React, { useCallback, useState } from 'react';
+
 import { useDataApi } from 'hooks/common/useDataApi';
 import { timeAgo } from 'utils/Time';
 

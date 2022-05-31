@@ -3,11 +3,10 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import makeStyles from '@mui/styles/makeStyles';
+import { Call } from '@user-office-software-libs/shared-types';
 import PropTypes from 'prop-types';
 import React, { Dispatch } from 'react';
 import { useQueryParams, NumberParam } from 'use-query-params';
-
-import { Call } from 'generated/sdk';
 
 const useStyles = makeStyles((theme) => ({
   formControl: {

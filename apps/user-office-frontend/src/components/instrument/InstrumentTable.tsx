@@ -1,5 +1,10 @@
 import AssignmentInd from '@mui/icons-material/AssignmentInd';
 import { Typography } from '@mui/material';
+import {
+  BasicUserDetails,
+  InstrumentFragment,
+  UserRole,
+} from '@user-office-software-libs/shared-types';
 import React, { useState } from 'react';
 import { useQueryParams } from 'use-query-params';
 
@@ -12,11 +17,6 @@ import { useInstrumentsData } from 'hooks/instrument/useInstrumentsData';
 import useDataApiWithFeedback from 'utils/useDataApiWithFeedback';
 import { FunctionType } from 'utils/utilTypes';
 
-import {
-  BasicUserDetails,
-  InstrumentFragment,
-  UserRole,
-} from '../../generated/sdk';
 import ParticipantModal from '../proposal/ParticipantModal';
 import AssignedScientistsTable from './AssignedScientistsTable';
 import CreateUpdateInstrument from './CreateUpdateInstrument';

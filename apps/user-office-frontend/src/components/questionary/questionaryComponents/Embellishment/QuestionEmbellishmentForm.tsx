@@ -1,3 +1,4 @@
+import { EmbellishmentConfig } from '@user-office-software-libs/shared-types';
 import { Field } from 'formik';
 import { CheckboxWithLabel, TextField } from 'formik-mui';
 import React, { FC } from 'react';
@@ -5,7 +6,6 @@ import * as Yup from 'yup';
 
 import FormikUICustomEditor from 'components/common/FormikUICustomEditor';
 import { QuestionFormProps } from 'components/questionary/QuestionaryComponentRegistry';
-import { EmbellishmentConfig } from 'generated/sdk';
 import { useNaturalKeySchema } from 'utils/userFieldValidationSchema';
 
 import { QuestionFormShell } from '../QuestionFormShell';

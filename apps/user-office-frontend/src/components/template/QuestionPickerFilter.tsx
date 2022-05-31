@@ -7,10 +7,10 @@ import {
   TextField,
 } from '@mui/material';
 import makeStyles from '@mui/styles/makeStyles';
+import { DataType } from '@user-office-software-libs/shared-types';
 import React, { ChangeEvent, useEffect, useState } from 'react';
 
 import { getQuestionaryComponentDefinitions } from 'components/questionary/QuestionaryComponentRegistry';
-import { DataType } from 'generated/sdk';
 
 import { QuestionFilter } from './QuestionPicker';
 

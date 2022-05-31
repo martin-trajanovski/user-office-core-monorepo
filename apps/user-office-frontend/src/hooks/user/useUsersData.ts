@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
-
 import {
   BasicUserDetailsFragment,
   GetUsersQueryVariables,
-} from 'generated/sdk';
+} from '@user-office-software-libs/shared-types';
+import { useEffect, useState } from 'react';
+
 import { useDataApi } from 'hooks/common/useDataApi';
 
 export function useUsersData(

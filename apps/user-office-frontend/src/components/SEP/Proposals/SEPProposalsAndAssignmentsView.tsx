@@ -1,9 +1,9 @@
 import { MTableToolbar, Options } from '@material-table/core';
+import { Sep } from '@user-office-software-libs/shared-types';
 import React from 'react';
 import { NumberParam, useQueryParams, withDefault } from 'use-query-params';
 
 import CallFilter from 'components/common/proposalFilters/CallFilter';
-import { Sep } from 'generated/sdk';
 import { useCallsData } from 'hooks/call/useCallsData';
 
 import SEPProposalsAndAssignmentsTable from './SEPProposalsAndAssignmentsTable';

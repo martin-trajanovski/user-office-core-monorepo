@@ -1,10 +1,11 @@
+import { Answer, DataType, Sdk } from '@user-office-software-libs/shared-types';
+
 import { feedbackBasisPreSubmit } from 'components/questionary/questionaryComponents/FeedbackBasis/QuestionaryComponentFeedbackBasis';
 import { genericTemplateBasisPreSubmit } from 'components/questionary/questionaryComponents/GenericTemplateBasis/QuestionaryComponentGenericTemplateBasis';
 import { proposalBasisPreSubmit } from 'components/questionary/questionaryComponents/ProposalBasis/QuestionaryComponentProposalBasis';
 import { sampleBasisPreSubmit } from 'components/questionary/questionaryComponents/SampleBasis/QuestionaryComponentSampleBasis';
 import { shipmentBasisPreSubmit } from 'components/questionary/questionaryComponents/ShipmentBasis/QuestionaryComponentShipmentBasis';
 import { visitBasisPreSubmit } from 'components/questionary/questionaryComponents/VisitBasis/QuestionaryComponentVisitBasis';
-import { Answer, DataType, Sdk } from 'generated/sdk';
 import {
   Event,
   QuestionarySubmissionState,

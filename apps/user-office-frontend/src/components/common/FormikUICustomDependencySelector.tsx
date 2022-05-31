@@ -4,9 +4,6 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import makeStyles from '@mui/styles/makeStyles';
-import { FormikHelpers, FormikValues } from 'formik';
-import React, { useCallback, useEffect, useState, useMemo } from 'react';
-
 import {
   DataType,
   EvaluatorOperator,
@@ -14,7 +11,10 @@ import {
   QuestionTemplateRelation,
   SelectionFromOptionsConfig,
   Template,
-} from 'generated/sdk';
+} from '@user-office-software-libs/shared-types';
+import { FormikHelpers, FormikValues } from 'formik';
+import React, { useCallback, useEffect, useState, useMemo } from 'react';
+
 import {
   getAllFields,
   getFieldById,

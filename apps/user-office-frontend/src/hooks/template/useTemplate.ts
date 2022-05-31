@@ -1,6 +1,6 @@
+import { GetTemplateQuery } from '@user-office-software-libs/shared-types';
 import { useEffect, useState } from 'react';
 
-import { GetTemplateQuery } from 'generated/sdk';
 import { useDataApi } from 'hooks/common/useDataApi';
 
 export function useTemplate(templateId: number) {

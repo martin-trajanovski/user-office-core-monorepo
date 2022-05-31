@@ -1,7 +1,7 @@
+import { TemplateGroupId } from '@user-office-software-libs/shared-types';
 import React from 'react';
 
 import SimpleTabs from 'components/common/TabPanel';
-import { TemplateGroupId } from 'generated/sdk';
 import { StyledContainer, StyledPaper } from 'styles/StyledComponents';
 
 import DefaultTemplatesTable from './DefaultTemplatesTable';

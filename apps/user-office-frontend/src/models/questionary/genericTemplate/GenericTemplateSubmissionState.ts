@@ -1,6 +1,8 @@
+import {
+  Questionary,
+  TemplateGroupId,
+} from '@user-office-software-libs/shared-types';
 import { immerable } from 'immer';
-
-import { Questionary, TemplateGroupId } from 'generated/sdk';
 
 import { QuestionarySubmissionState } from '../QuestionarySubmissionState';
 import { GenericTemplateWithQuestionary } from './GenericTemplateWithQuestionary';

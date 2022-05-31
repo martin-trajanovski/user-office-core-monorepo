@@ -2,6 +2,7 @@ import Button from '@mui/material/Button';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Typography from '@mui/material/Typography';
 import makeStyles from '@mui/styles/makeStyles';
+import { Sep } from '@user-office-software-libs/shared-types';
 import { createSEPValidationSchema } from '@user-office-software/duo-validation/lib/SEP';
 import { Field, Form, Formik } from 'formik';
 import { Checkbox, TextField } from 'formik-mui';
@@ -9,7 +10,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import UOLoader from 'components/common/UOLoader';
-import { Sep } from 'generated/sdk';
 import useDataApiWithFeedback from 'utils/useDataApiWithFeedback';
 
 const useStyles = makeStyles((theme) => ({

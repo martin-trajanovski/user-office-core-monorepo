@@ -8,17 +8,17 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import Tooltip from '@mui/material/Tooltip';
-import { Field, FieldArray, FormikProps } from 'formik';
-import React, { useCallback, useEffect, useState } from 'react';
-
-import FormikUICustomDependencySelector from 'components/common/FormikUICustomDependencySelector';
 import {
   DataType,
   DependenciesLogicOperator,
   EvaluatorOperator,
   QuestionTemplateRelation,
   Template,
-} from 'generated/sdk';
+} from '@user-office-software-libs/shared-types';
+import { Field, FieldArray, FormikProps } from 'formik';
+import React, { useCallback, useEffect, useState } from 'react';
+
+import FormikUICustomDependencySelector from 'components/common/FormikUICustomDependencySelector';
 import { getAllFields } from 'models/questionary/QuestionaryFunctions';
 
 type QuestionDependencyListProps = {

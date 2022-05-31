@@ -5,6 +5,13 @@ import GetAppIcon from '@mui/icons-material/GetApp';
 import Visibility from '@mui/icons-material/Visibility';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
+import {
+  FeatureId,
+  Proposal,
+  ProposalsFilter,
+  ReviewerFilter,
+  SubmitTechnicalReviewInput,
+} from '@user-office-software-libs/shared-types';
 import { proposalTechnicalReviewValidationSchema } from '@user-office-software/duo-validation';
 import React, { useContext, useState, useEffect } from 'react';
 import {
@@ -24,13 +31,6 @@ import ReviewerFilterComponent, {
 } from 'components/review/ReviewerFilter';
 import { FeatureContext } from 'context/FeatureContextProvider';
 import { UserContext } from 'context/UserContextProvider';
-import {
-  FeatureId,
-  Proposal,
-  ProposalsFilter,
-  ReviewerFilter,
-  SubmitTechnicalReviewInput,
-} from 'generated/sdk';
 import { useInstrumentScientistCallsData } from 'hooks/call/useInstrumentScientistCallsData';
 import { useLocalStorage } from 'hooks/common/useLocalStorage';
 import { useInstrumentsData } from 'hooks/instrument/useInstrumentsData';

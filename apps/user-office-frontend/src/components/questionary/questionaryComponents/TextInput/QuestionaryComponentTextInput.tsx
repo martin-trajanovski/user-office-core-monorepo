@@ -1,10 +1,10 @@
+import { TextInputConfig } from '@user-office-software-libs/shared-types';
 import { getIn } from 'formik';
 import React, { ChangeEvent, KeyboardEvent, useEffect, useState } from 'react';
 
 import TextFieldWithCounter from 'components/common/TextFieldWithCounter';
 import withPreventSubmit from 'components/common/withPreventSubmit';
 import { BasicComponentProps } from 'components/proposal/IBasicComponentProps';
-import { TextInputConfig } from 'generated/sdk';
 import isEventFromAutoComplete from 'utils/isEventFromAutoComplete';
 
 const TextFieldNoSubmit = withPreventSubmit(TextFieldWithCounter);

@@ -1,9 +1,10 @@
+import { TemplateGroupId } from '@user-office-software-libs/shared-types';
+
 import { getQuestionaryDefinition } from 'components/questionary/QuestionaryRegistry';
 import { useDataApi } from 'hooks/common/useDataApi';
 import { MiddlewareInputParams } from 'utils/useReducerWithMiddleWares';
 import { FunctionType } from 'utils/utilTypes';
 
-import { TemplateGroupId } from './../../generated/sdk';
 import {
   Event,
   QuestionarySubmissionState,

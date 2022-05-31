@@ -1,11 +1,14 @@
 import MaterialTable, { Column } from '@material-table/core';
 import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
+import {
+  ProposalTemplate,
+  TemplateGroupId,
+} from '@user-office-software-libs/shared-types';
 import React, { useCallback, useState } from 'react';
 
 import { ActionButtonContainer } from 'components/common/ActionButtonContainer';
 import InputDialog from 'components/common/InputDialog';
-import { ProposalTemplate, TemplateGroupId } from 'generated/sdk';
 import { useFormattedDateTime } from 'hooks/admin/useFormattedDateTime';
 import { useCallsData } from 'hooks/call/useCallsData';
 import { tableIcons } from 'utils/materialIcons';

@@ -1,4 +1,4 @@
-import { User } from 'generated/sdk';
+import { User } from '@user-office-software-libs/shared-types';
 
 export const getFullUserName = (
   user?: Pick<User, 'firstname' | 'lastname'> | null

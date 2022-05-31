@@ -1,12 +1,12 @@
 import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
 import makeStyles from '@mui/styles/makeStyles';
+import { Answer } from '@user-office-software-libs/shared-types';
 import React, { useState } from 'react';
 
 import { ActionButtonContainer } from 'components/common/ActionButtonContainer';
 import InputDialog from 'components/common/InputDialog';
 import SampleDetails from 'components/sample/SampleDetails';
-import { Answer } from 'generated/sdk';
 import { useSamplesWithQuestionaryStatus } from 'hooks/sample/useSamplesWithQuestionaryStatus';
 import { SampleCore } from 'models/questionary/sample/SampleCore';
 
