@@ -89,6 +89,19 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+
+      - name: Login to GitHub Packages Docker Registry
+        uses: docker/login-action@v1
+        with:
+          registry: docker.pkg.github.com
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Download required repositories
+        run: |
+          cd "$GITHUB_WORKSPACE/.."
+          git clone --depth 1 --branch "${{ needs.resolve_dep.outputs.FACTORY_TAG }}" https://github.com/UserOfficeProject/user-office-factory.git
+
       - name: Run e2e tests
         env:
           USER_OFFICE_BACKEND_DIR: apps/user-office-backend
@@ -106,11 +119,10 @@ jobs:
           USER_OFFICE_FACTORY_TAG: ${{ needs.resolve_dep.outputs.FACTORY_TAG }}
           SCHEMA_URL: http://localhost:4000/graphql
           SVC_ACC_TOKEN: ${{ secrets.SVC_ACC_TOKEN }}
+          CYPRES_SPEC_PATTERN: ${{ matrix.pattern }}
+          BUILD_TAG: ${{ github.sha }}
         run: |
           REPO_DIR_NAME=$(basename $GITHUB_WORKSPACE)
-          export BUILD_TAG=${{ github.sha }}
-
-          export CYPRES_SPEC_PATTERN=${{ matrix.pattern }}
 
           npm install
 
@@ -121,7 +133,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: cypress-screenshots
-          path: cypress/screenshots
+          path: apps/user-office-frontend-e2e/cypress/screenshots
 
   push:
     # The type of runner that the job will run on
