@@ -79,12 +79,12 @@ jobs:
       matrix:
         pattern:
           [
-            'apps/user-office-frontend-e2e/cypress/integration/[a-e]*.ts',
-            'apps/user-office-frontend-e2e/cypress/integration/[f-i]*.ts',
-            'apps/user-office-frontend-e2e/cypress/integration/[j-p]*.ts',
-            'apps/user-office-frontend-e2e/cypress/integration/[r-s]*.ts',
-            'apps/user-office-frontend-e2e/cypress/integration/[t-z]*.ts',
-            'apps/user-office-frontend-e2e/cypress/integration/[A-Z]*.ts',
+            'cypress/integration/[a-e]*.ts',
+            'cypress/integration/[f-i]*.ts',
+            'cypress/integration/[j-p]*.ts',
+            'cypress/integration/[r-s]*.ts',
+            'cypress/integration/[t-z]*.ts',
+            'cypress/integration/[A-Z]*.ts',
           ]
 
     steps:
