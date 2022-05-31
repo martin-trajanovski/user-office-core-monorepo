@@ -113,9 +113,7 @@ jobs:
 
           npm install
 
-          npm run dev
-
-          npm run test
+          npm run e2e:after:dev
 
       - name: Upload cypres screenshots
         if: ${{ failure() }}
