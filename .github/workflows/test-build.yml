@@ -88,6 +88,7 @@ jobs:
           ]
 
     steps:
+      - uses: actions/checkout@v2
       - name: Run e2e tests
         env:
           USER_OFFICE_BACKEND_DIR: apps/user-office-backend
@@ -107,6 +108,7 @@ jobs:
           SVC_ACC_TOKEN: ${{ secrets.SVC_ACC_TOKEN }}
           CYPRES_SPEC_PATTERN: ${{ matrix.pattern }}
         run: |
+          REPO_DIR_NAME=$(basename $GITHUB_WORKSPACE)
           export BUILD_TAG=${{ github.sha }}
 
           npm install
