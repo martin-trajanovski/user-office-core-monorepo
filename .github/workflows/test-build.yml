@@ -90,6 +90,32 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Cache frontend node_modules
+        id: frontend-cached-modules
+        uses: actions/cache@v2
+        env:
+          cache-name: frontend-node-modules-cache
+        with:
+          path: apps/user-office-frontend/node_modules
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('apps/user-office-frontend/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ env.cache-name }}-
+
+      - name: Cache backend node_modules
+        id: backend-cached-modules
+        uses: actions/cache@v2
+        env:
+          cache-name: backend-node-modules-cache
+        with:
+          path: apps/user-office-backend/node_modules
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('apps/user-office-backend/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ env.cache-name }}-
+
+      - name: Install dependencies
+        if: ${{ (steps.frontend-cached-modules.outputs.cache-hit != 'true') && (steps.backend-cached-modules.outputs.cache-hit != 'true') }}
+        run: npm install
+
       - name: Login to GitHub Packages Docker Registry
         uses: docker/login-action@v1
         with:
@@ -127,8 +153,6 @@ jobs:
           BUILD_TAG: ${{ github.sha }}
         run: |
           REPO_DIR_NAME=$(basename $GITHUB_WORKSPACE)
-
-          npm install
 
           npm run e2e:after:dev
 
