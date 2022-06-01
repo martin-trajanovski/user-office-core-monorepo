@@ -132,16 +132,6 @@ jobs:
 
           npm run e2e:after:dev
 
-          ls
-
-          cd apps/user-office-frontend-e2e
-
-          ls
-
-          cd cypress
-
-          ls
-
       - name: Upload cypres screenshots
         if: failure()
         uses: actions/upload-artifact@v3
