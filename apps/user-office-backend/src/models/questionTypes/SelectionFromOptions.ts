@@ -1,5 +1,5 @@
 /* eslint-disable quotes */
-import { multipleChoiceValidationSchema } from '@user-office-software/duo-validation';
+import { multipleChoiceValidationSchema } from '@user-office-software-libs/validation';
 
 import { SelectionFromOptionsConfig } from '../../resolvers/types/FieldConfig';
 import { QuestionFilterCompareOperator } from '../Questionary';

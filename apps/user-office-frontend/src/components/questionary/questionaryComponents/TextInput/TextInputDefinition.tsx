@@ -1,6 +1,6 @@
 import ShortTextIcon from '@mui/icons-material/ShortText';
 import { DataType } from '@user-office-software-libs/shared-types';
-import { textInputQuestionValidationSchema } from '@user-office-software/duo-validation';
+import { textInputQuestionValidationSchema } from '@user-office-software-libs/validation';
 import React from 'react';
 
 import defaultRenderer from 'components/questionary/DefaultQuestionRenderer';

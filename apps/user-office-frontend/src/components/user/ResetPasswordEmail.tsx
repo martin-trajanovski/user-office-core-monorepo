@@ -5,7 +5,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import makeStyles from '@mui/styles/makeStyles';
-import { resetPasswordByEmailValidationSchema } from '@user-office-software/duo-validation/lib/User';
+import { resetPasswordByEmailValidationSchema } from '@user-office-software-libs/validation';
 import { Field, Form, Formik } from 'formik';
 import { TextField } from 'formik-mui';
 import React, { useState } from 'react';

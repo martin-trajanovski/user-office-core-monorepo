@@ -11,7 +11,7 @@ import { PermissionsWithAccessToken } from '@user-office-software-libs/shared-ty
 import {
   createApiAccessTokenValidationSchema,
   updateApiAccessTokenValidationSchema,
-} from '@user-office-software/duo-validation/lib/Admin';
+} from '@user-office-software-libs/validation';
 import { Field, FieldArray, FieldArrayRenderProps, Form, Formik } from 'formik';
 import { TextField } from 'formik-mui';
 import React from 'react';

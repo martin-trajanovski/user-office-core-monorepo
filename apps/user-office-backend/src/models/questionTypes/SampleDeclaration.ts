@@ -1,4 +1,4 @@
-import { sampleDeclarationValidationSchema } from '@user-office-software/duo-validation';
+import { sampleDeclarationValidationSchema } from '@user-office-software-libs/validation';
 
 import {
   DataType,

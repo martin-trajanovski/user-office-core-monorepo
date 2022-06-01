@@ -1,6 +1,6 @@
-import { logger } from '@user-office-software/duo-logger';
 /* eslint-disable quotes */
-import { numberInputQuestionValidationSchema } from '@user-office-software/duo-validation';
+import { numberInputQuestionValidationSchema } from '@user-office-software-libs/validation';
+import { logger } from '@user-office-software/duo-logger';
 
 import {
   NumberInputConfig,

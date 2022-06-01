@@ -1,6 +1,6 @@
 import AttachFileIcon from '@mui/icons-material/AttachFile';
 import { DataType } from '@user-office-software-libs/shared-types';
-import { fileUploadQuestionValidationSchema } from '@user-office-software/duo-validation';
+import { fileUploadQuestionValidationSchema } from '@user-office-software-libs/validation';
 import React from 'react';
 
 import defaultRenderer from 'components/questionary/DefaultQuestionRenderer';

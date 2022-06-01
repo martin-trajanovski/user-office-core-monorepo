@@ -5,7 +5,7 @@ import {
   BasicUserDetails,
   UserRole,
 } from '@user-office-software-libs/shared-types';
-import { createUserByEmailInviteValidationSchema } from '@user-office-software/duo-validation/lib/User';
+import { createUserByEmailInviteValidationSchema } from '@user-office-software-libs/validation';
 import { Field, Form, Formik } from 'formik';
 import { TextField } from 'formik-mui';
 import React from 'react';

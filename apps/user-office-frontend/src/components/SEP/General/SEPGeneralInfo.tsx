@@ -6,7 +6,7 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import makeStyles from '@mui/styles/makeStyles';
 import { Sep, UserRole } from '@user-office-software-libs/shared-types';
-import { updateSEPValidationSchema } from '@user-office-software/duo-validation/lib/SEP';
+import { updateSEPValidationSchema } from '@user-office-software-libs/validation';
 import { Formik, Form, Field } from 'formik';
 import React from 'react';
 

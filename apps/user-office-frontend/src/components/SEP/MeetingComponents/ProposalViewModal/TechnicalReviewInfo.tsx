@@ -19,7 +19,7 @@ import {
   Proposal,
   TechnicalReview,
 } from '@user-office-software-libs/shared-types';
-import { updateTimeAllocationValidationSchema } from '@user-office-software/duo-validation';
+import { updateTimeAllocationValidationSchema } from '@user-office-software-libs/validation';
 import clsx from 'clsx';
 import { Formik, Form, Field } from 'formik';
 import { TextField } from 'formik-mui';

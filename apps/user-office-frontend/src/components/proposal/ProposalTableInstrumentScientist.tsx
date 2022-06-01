@@ -12,7 +12,7 @@ import {
   ReviewerFilter,
   SubmitTechnicalReviewInput,
 } from '@user-office-software-libs/shared-types';
-import { proposalTechnicalReviewValidationSchema } from '@user-office-software/duo-validation';
+import { proposalTechnicalReviewValidationSchema } from '@user-office-software-libs/validation';
 import React, { useContext, useState, useEffect } from 'react';
 import {
   NumberParam,

@@ -1,6 +1,6 @@
 import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
 import { DataType } from '@user-office-software-libs/shared-types';
-import { booleanQuestionValidationSchema } from '@user-office-software/duo-validation';
+import { booleanQuestionValidationSchema } from '@user-office-software-libs/validation';
 import React from 'react';
 
 import defaultRenderer from 'components/questionary/DefaultQuestionRenderer';

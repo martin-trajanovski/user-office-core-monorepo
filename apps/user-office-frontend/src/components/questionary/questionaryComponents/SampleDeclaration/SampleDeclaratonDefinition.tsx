@@ -1,6 +1,6 @@
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import { DataType } from '@user-office-software-libs/shared-types';
-import { sampleDeclarationValidationSchema } from '@user-office-software/duo-validation';
+import { sampleDeclarationValidationSchema } from '@user-office-software-libs/validation';
 import React from 'react';
 
 import defaultRenderer from 'components/questionary/DefaultQuestionRenderer';
