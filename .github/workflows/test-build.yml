@@ -135,7 +135,7 @@ jobs:
 
       - name: Upload cypres screenshots
         if: ${{ failure() }}
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: cypress-screenshots
           path: ./${USER_OFFICE_FRONTEND_E2E_DIR}/cypress/screenshots
