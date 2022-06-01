@@ -12,8 +12,6 @@ export function useFeatures(): {
   const [loadingFeatures, setLoadingFeatures] = useState(true);
 
   const api = useDataApi();
-  
-  
 
   useEffect(() => {
     let unmounted = false;
