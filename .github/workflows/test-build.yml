@@ -109,6 +109,9 @@ jobs:
           USER_OFFICE_FRONTEND_E2E_DIR: apps/user-office-frontend-e2e
           USER_OFFICE_BACKEND: http://localhost:4000/graphql
           USER_OFFICE_ENDPOINT: $USER_OFFICE_BACKEND
+          TZ: Europe/Stockholm
+          DATE_FORMAT: dd-MM-yyyy
+          DATE_TIME_FORMAT: dd-MM-yyyy HH:mm
           DEPENDENCY_CONFIG: ess
           secret: qMyLZALzs229ybdQXNyzYRdju7X784TH
           NODE_ENV: development
@@ -131,7 +134,13 @@ jobs:
 
           ls
 
+          cd apps/user-office-frontend-e2e
+
+          ls
+
           cd cypress/screenshots
+
+          ls
 
       - name: Upload cypres screenshots
         if: ${{ failure() }}
