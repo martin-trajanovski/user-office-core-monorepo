@@ -138,12 +138,12 @@ jobs:
 
           ls
 
-          cd cypress/screenshots
+          cd cypress
 
           ls
 
       - name: Upload cypres screenshots
-        if: ${{ failure() }}
+        if: failure()
         uses: actions/upload-artifact@v3
         with:
           name: cypress-screenshots
