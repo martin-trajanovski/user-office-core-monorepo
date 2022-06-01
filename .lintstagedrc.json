@@ -1,4 +1,0 @@
-{
-  "*.{js,ts,jsx,tsx}": "npm run lint",
-  "*.{json,md}": "prettier --write"
-}
