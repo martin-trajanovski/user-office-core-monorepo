@@ -33,20 +33,12 @@
     "user-office",
     "monorepo"
   ],
-  "lint-staged": {
-    "*.{js,ts,jsx,tsx}": "npm run lint"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "dependencies": {
     "concurrently": "^7.2.1",
     "wait-on": "^6.0.1"
   },
   "devDependencies": {
-    "husky": "^8.0.1",
+    "husky": "^4.3.8",
     "lint-staged": "^13.0.0"
   }
 }
