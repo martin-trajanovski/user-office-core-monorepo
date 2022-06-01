@@ -1,10 +1,10 @@
 {
-  "name": "user-office-backend",
+  "name": "user-office-backend-test",
   "version": "1.0.0",
-  "description": "User office backend",
+  "description": "User office backend test",
   "repository": {
     "type": "git",
-    "url": "https://github.com/UserOfficeProject/user-office-backend.git"
+    "url": "https://github.com/UserOfficeProject/user-office-core-monorepo.git"
   },
   "private": true,
   "main": "index.js",
