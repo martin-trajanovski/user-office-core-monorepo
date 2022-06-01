@@ -6,7 +6,6 @@ context('Experiments tests', () => {
   });
 
   beforeEach(() => {
-    cy.viewport(1920, 1080);
     cy.resetDB(true);
     cy.updateProposalManagementDecision({
       proposalPk: initialDBData.proposal.id,

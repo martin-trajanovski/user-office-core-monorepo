@@ -22,10 +22,12 @@
     "install:libs:shared-types": "cd libs/shared-types && npm install",
     "install:user-office-frontend-e2e": "cd apps/user-office-frontend-e2e && npm install",
     "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
-    "dev:backend": "cd apps/user-office-backend && npm run dev:e2e",
+    "dev:e2e": "concurrently \"npm run dev:backend:e2e\" \"npm run dev:frontend\"",
+    "dev:backend": "cd apps/user-office-backend && npm run dev",
+    "dev:backend:e2e": "cd apps/user-office-backend && npm run dev:e2e",
     "dev:frontend": "cd apps/user-office-frontend && npm run dev",
     "generate:shared:types": "cd libs/shared-types && node scripts/generate-graphql-sdk.js",
-    "e2e:after:dev": "concurrently -k -s first \"wait-on http://localhost:3000 && cd apps/user-office-frontend-e2e && npm run cy:run:action\" \"npm run dev\""
+    "e2e:after:dev": "concurrently -k -s first \"wait-on http://localhost:3000 && cd apps/user-office-frontend-e2e && npm run cy:run:action\" \"npm run dev:e2e\""
   },
   "keywords": [
     "duo",
