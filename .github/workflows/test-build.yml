@@ -137,7 +137,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: cypress-screenshots
-          path: ./${USER_OFFICE_FRONTEND_E2E_DIR}/cypress/screenshots
+          path: apps/user-office-frontend-e2e/cypress/screenshots
 
   push:
     # The type of runner that the job will run on
