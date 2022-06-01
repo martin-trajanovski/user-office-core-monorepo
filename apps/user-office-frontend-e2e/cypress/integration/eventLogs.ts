@@ -2,7 +2,6 @@ import {
   UpdateUserMutationVariables,
   User,
 } from '@user-office-software-libs/shared-types';
-
 import faker from 'faker';
 import { DateTime } from 'luxon';
 

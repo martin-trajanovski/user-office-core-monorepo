@@ -1,5 +1,4 @@
 import { TemplateGroupId } from '@user-office-software-libs/shared-types';
-
 import faker from 'faker';
 import { DateTime } from 'luxon';
 

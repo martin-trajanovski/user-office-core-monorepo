@@ -9,9 +9,10 @@
     "test": "concurrently \"npm run test:backend\" \"npm run test:frontend\"",
     "test:backend": "cd apps/user-office-backend && npm run test",
     "test:frontend": "cd apps/user-office-frontend-e2e && npm run cy:run",
-    "lint": "concurrently \"npm run lint:backend\" \"npm run lint:frontend\"",
+    "lint": "concurrently \"npm run lint:backend\" \"npm run lint:frontend\" \"npm run lint:e2e\"",
     "lint:backend": "cd apps/user-office-backend && npm run lint",
     "lint:frontend": "cd apps/user-office-frontend && npm run lint",
+    "lint:e2e": "cd apps/user-office-frontend-e2e && npm run lint",
     "build": "concurrently \"npm run build:backend\" \"npm run build:frontend\"",
     "build:backend": "cd apps/user-office-backend && npm run build",
     "build:frontend": "cd apps/user-office-frontend && npm run build",
@@ -32,8 +33,20 @@
     "user-office",
     "monorepo"
   ],
+  "lint-staged": {
+    "**/*.{js,ts,jsx,tsx}": "npm run lint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "dependencies": {
     "concurrently": "^7.2.1",
     "wait-on": "^6.0.1"
+  },
+  "devDependencies": {
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.0"
   }
 }
