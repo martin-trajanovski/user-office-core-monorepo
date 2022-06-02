@@ -21,7 +21,7 @@ import {
   UpdateUserMutationVariables,
   UserRole,
 } from '@user-office-software-libs/shared-types';
-import { updateUserValidationSchema } from '@user-office-software/duo-validation';
+import { updateUserValidationSchema } from '@user-office-software-libs/validation';
 import { Field, Form, Formik } from 'formik';
 import { Select, TextField } from 'formik-mui';
 import { DatePicker } from 'formik-mui-lab';

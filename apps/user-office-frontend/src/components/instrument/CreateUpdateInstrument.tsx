@@ -8,7 +8,7 @@ import {
 import {
   createInstrumentValidationSchema,
   updateInstrumentValidationSchema,
-} from '@user-office-software/duo-validation/lib/Instrument';
+} from '@user-office-software-libs/validation';
 import { Field, Form, Formik } from 'formik';
 import { TextField } from 'formik-mui';
 import PropTypes from 'prop-types';

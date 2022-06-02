@@ -6,7 +6,6 @@ import {
   EvaluatorOperator,
   TemplateCategoryId,
 } from '@user-office-software-libs/shared-types';
-
 import faker, { lorem } from 'faker';
 import { DateTime } from 'luxon';
 

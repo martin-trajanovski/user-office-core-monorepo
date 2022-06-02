@@ -12,7 +12,7 @@ import {
   Review,
   UserRole,
 } from '@user-office-software-libs/shared-types';
-import { proposalGradeValidationSchema } from '@user-office-software/duo-validation/lib/Review';
+import { proposalGradeValidationSchema } from '@user-office-software-libs/validation';
 import { Field, Form, Formik, useFormikContext } from 'formik';
 import { Select, CheckboxWithLabel } from 'formik-mui';
 import React, { useState, useContext } from 'react';

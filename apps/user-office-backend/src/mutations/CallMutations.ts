@@ -3,7 +3,7 @@ import {
   updateCallValidationSchemas,
   assignInstrumentsToCallValidationSchema,
   removeAssignedInstrumentFromCallValidationSchema,
-} from '@user-office-software/duo-validation';
+} from '@user-office-software-libs/validation';
 import { inject, injectable } from 'tsyringe';
 
 import { Tokens } from '../config/Tokens';

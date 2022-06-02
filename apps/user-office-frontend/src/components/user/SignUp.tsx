@@ -21,7 +21,7 @@ import {
   SettingsId,
   Maybe,
 } from '@user-office-software-libs/shared-types';
-import { createUserValidationSchema } from '@user-office-software/duo-validation';
+import { createUserValidationSchema } from '@user-office-software-libs/validation';
 import clsx from 'clsx';
 import { Field, Form, Formik } from 'formik';
 import { CheckboxWithLabel, Select, TextField } from 'formik-mui';

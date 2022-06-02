@@ -3,7 +3,7 @@ import {
   DataType,
   IntervalConfig,
 } from '@user-office-software-libs/shared-types';
-import { intervalQuestionValidationSchema } from '@user-office-software/duo-validation';
+import { intervalQuestionValidationSchema } from '@user-office-software-libs/validation';
 import React from 'react';
 
 import defaultRenderer from 'components/questionary/DefaultQuestionRenderer';

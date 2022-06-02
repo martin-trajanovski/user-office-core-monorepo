@@ -80,21 +80,74 @@ jobs:
         pattern:
           [
             'cypress/integration/[a-e]*.ts',
-            'cypress/integration/[f-i]*.ts',
-            'cypress/integration/[j-p]*.ts',
+            'cypress/integration/[f-g]*.ts',
+            'cypress/integration/[h-i]*.ts',
+            'cypress/integration/[j-n]*.ts',
+            'cypress/integration/[m-p]*.ts',
             'cypress/integration/[r-s]*.ts',
-            'cypress/integration/[t-z]*.ts',
+            'cypress/integration/[t-t]*.ts',
+            'cypress/integration/[u-z]*.ts',
             'cypress/integration/[A-Z]*.ts',
           ]
 
     steps:
       - uses: actions/checkout@v2
+
+      # Caching should be reviewed and set up better
+      # - name: Cache frontend node_modules
+      #   id: frontend-cached-modules
+      #   uses: actions/cache@v2
+      #   env:
+      #     cache-name: frontend-node-modules-cache
+      #   with:
+      #     path: apps/user-office-frontend/node_modules
+      #     key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('apps/user-office-frontend/package-lock.json') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-${{ env.cache-name }}-
+
+      # - name: Cache backend node_modules
+      #   id: backend-cached-modules
+      #   uses: actions/cache@v2
+      #   env:
+      #     cache-name: backend-node-modules-cache
+      #   with:
+      #     path: apps/user-office-backend/node_modules
+      #     key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('apps/user-office-backend/package-lock.json') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-${{ env.cache-name }}-
+
+      - name: Install root dependencies
+        run: |
+          npm install
+          npm run install:all
+
+      # Caching should be reviewed and set up better
+      # - name: Install all dependencies
+      #   if: ${{ (steps.frontend-cached-modules.outputs.cache-hit != 'true') && (steps.backend-cached-modules.outputs.cache-hit != 'true') }}
+      #   run: npm run install:all
+
+      - name: Login to GitHub Packages Docker Registry
+        uses: docker/login-action@v1
+        with:
+          registry: docker.pkg.github.com
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Download required repositories
+        run: |
+          cd "$GITHUB_WORKSPACE/.."
+          git clone --depth 1 --branch "${{ needs.resolve_dep.outputs.FACTORY_TAG }}" https://github.com/UserOfficeProject/user-office-factory.git
+
       - name: Run e2e tests
         env:
           USER_OFFICE_BACKEND_DIR: apps/user-office-backend
           USER_OFFICE_FRONTEND_DIR: apps/user-office-frontend
+          USER_OFFICE_FRONTEND_E2E_DIR: apps/user-office-frontend-e2e
           USER_OFFICE_BACKEND: http://localhost:4000/graphql
           USER_OFFICE_ENDPOINT: $USER_OFFICE_BACKEND
+          TZ: Europe/Stockholm
+          DATE_FORMAT: dd-MM-yyyy
+          DATE_TIME_FORMAT: dd-MM-yyyy HH:mm
           DEPENDENCY_CONFIG: ess
           secret: qMyLZALzs229ybdQXNyzYRdju7X784TH
           NODE_ENV: development
@@ -106,22 +159,19 @@ jobs:
           USER_OFFICE_FACTORY_TAG: ${{ needs.resolve_dep.outputs.FACTORY_TAG }}
           SCHEMA_URL: http://localhost:4000/graphql
           SVC_ACC_TOKEN: ${{ secrets.SVC_ACC_TOKEN }}
+          CYPRES_SPEC_PATTERN: ${{ matrix.pattern }}
+          BUILD_TAG: ${{ github.sha }}
         run: |
           REPO_DIR_NAME=$(basename $GITHUB_WORKSPACE)
-          export BUILD_TAG=${{ github.sha }}
-
-          export CYPRES_SPEC_PATTERN=${{ matrix.pattern }}
-
-          npm install
 
           npm run e2e:after:dev
 
       - name: Upload cypres screenshots
-        if: ${{ failure() }}
-        uses: actions/upload-artifact@v2
+        if: failure()
+        uses: actions/upload-artifact@v3
         with:
           name: cypress-screenshots
-          path: cypress/screenshots
+          path: apps/user-office-frontend-e2e/cypress/screenshots
 
   push:
     # The type of runner that the job will run on

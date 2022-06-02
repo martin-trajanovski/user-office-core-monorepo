@@ -1,5 +1,5 @@
 /* eslint-disable quotes */
-import { dateQuestionValidationSchema } from '@user-office-software/duo-validation';
+import { dateQuestionValidationSchema } from '@user-office-software-libs/validation';
 import { DateTime } from 'luxon';
 
 import { DateConfig } from '../../resolvers/types/FieldConfig';

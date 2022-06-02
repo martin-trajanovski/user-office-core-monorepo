@@ -14,7 +14,7 @@ import {
   SepMeetingDecision,
   UserRole,
 } from '@user-office-software-libs/shared-types';
-import { saveSepMeetingDecisionValidationSchema } from '@user-office-software/duo-validation';
+import { saveSepMeetingDecisionValidationSchema } from '@user-office-software-libs/validation';
 import { Formik, Form, Field, useFormikContext } from 'formik';
 import { CheckboxWithLabel, Select } from 'formik-mui';
 import PropTypes from 'prop-types';

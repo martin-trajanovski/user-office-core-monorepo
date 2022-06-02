@@ -4,7 +4,7 @@ import {
   TemplateGroupId,
   TemplateMetadataFragment,
 } from '@user-office-software-libs/shared-types';
-import { createTemplateValidationSchema } from '@user-office-software/duo-validation/lib/Template';
+import { createTemplateValidationSchema } from '@user-office-software-libs/validation';
 import { Field, Form, Formik } from 'formik';
 import { TextField } from 'formik-mui';
 import { useSnackbar } from 'notistack';

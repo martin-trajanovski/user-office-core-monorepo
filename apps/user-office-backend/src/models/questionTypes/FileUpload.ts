@@ -1,8 +1,8 @@
 /* eslint-disable quotes */
 import fs from 'fs/promises';
 
+import { fileUploadQuestionValidationSchema } from '@user-office-software-libs/validation';
 import { logger } from '@user-office-software/duo-logger';
-import { fileUploadQuestionValidationSchema } from '@user-office-software/duo-validation';
 import NodeClam from 'clamscan';
 import fileTypeInfo from 'magic-bytes.js';
 import { GuessedFile } from 'magic-bytes.js/dist/model/tree';

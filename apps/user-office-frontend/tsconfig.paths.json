@@ -5,6 +5,19 @@
       "@user-office-software-libs/shared-types": [
         "../../libs/shared-types/src/index.ts"
       ],
+      "@user-office-software-libs/validation": [
+        "../../libs/validation/src/index.ts"
+      ],
+      "@user-office-software-libs/logger": ["../../libs/logger/src/index.ts"],
+      "@user-office-software-libs/localization": [
+        "../../libs/localization/src/index.ts"
+      ],
+      "@user-office-software-libs/message-broker": [
+        "../../libs/message-broker/src/index.ts"
+      ],
+      "@user-office-software-libs/uows-client-generator": [
+        "../../libs/uows-client-generator/src/index.ts"
+      ],
       "components/*": ["./src/components/*"],
       "context/*": ["./src/context/*"],
       "hooks/*": ["./src/hooks/*"],

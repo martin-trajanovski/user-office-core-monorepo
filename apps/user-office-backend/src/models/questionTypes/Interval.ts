@@ -1,7 +1,7 @@
 /* eslint-disable quotes */
 
+import { intervalQuestionValidationSchema } from '@user-office-software-libs/validation';
 import { logger } from '@user-office-software/duo-logger';
-import { intervalQuestionValidationSchema } from '@user-office-software/duo-validation';
 
 import { IntervalConfig } from '../../resolvers/types/FieldConfig';
 import { isSiConversionFormulaValid } from '../../utils/isSiConversionFormulaValid';

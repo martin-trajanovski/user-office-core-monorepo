@@ -1,10 +1,10 @@
 {
-  "name": "user-office-backend",
+  "name": "user-office-backend-test",
   "version": "1.0.0",
-  "description": "User office backend",
+  "description": "User office backend test",
   "repository": {
     "type": "git",
-    "url": "https://github.com/UserOfficeProject/user-office-backend.git"
+    "url": "https://github.com/UserOfficeProject/user-office-core-monorepo.git"
   },
   "private": true,
   "main": "index.js",
@@ -17,24 +17,17 @@
     "test:windows:integration": "powershell \"$Env:DATABASE_URL='postgres://duouser:duopassword@127.0.0.1:5432/duo'; jest --config ./jest.integration.config.js --runInBand --testTimeout=15000",
     "tsc": "tsc",
     "build": "rm -rf ./build && tsc",
-    "dev": "docker-compose up -d && ts-node-dev --respawn -T ./index.ts",
-    "dev:docker": "npm install && ts-node-dev --inspect=0.0.0.0:9229 --respawn -T ./index.ts",
+    "dev": "docker-compose up -d && ts-node-dev -r tsconfig-paths/register --respawn -T ./index.ts",
+    "dev:e2e": "docker-compose -f docker-compose.e2e.yml up -d && ts-node-dev -r tsconfig-paths/register --respawn -T ./index.ts",
+    "dev:docker": "npm install && ts-node-dev -r tsconfig-paths/register --inspect=0.0.0.0:9229 --respawn -T ./index.ts",
     "prod": "tsc && node ./build/index.js",
     "lint": "tsc --noEmit && eslint . --ext .js,.ts --quiet",
     "lint:fix": "tsc --noEmit && eslint . --ext .js,.ts --fix --quiet",
     "start": "tsc && node ./build/index.js",
     "apitest": "newman run api_tests/tests.json --environment api_tests/environment.json",
-    "debug": "ts-node-dev --inspect --respawn -T ./index.ts",
-    "populate": "ts-node-dev --respawn -T ./src/populate/index.ts",
+    "debug": "ts-node-dev -r tsconfig-paths/register --inspect --respawn -T ./index.ts",
+    "populate": "ts-node-dev -r tsconfig-paths/register --respawn -T ./src/populate/index.ts",
     "generate:uows-client:dev": "uows-client-generator https://devapis.facilities.rl.ac.uk/ws/UserOfficeWebService?wsdl src/datasources/stfc/UOWSSoapInterface.ts"
-  },
-  "lint-staged": {
-    "**/*.{js,ts}": "npm run lint"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "author": "",
   "license": "ISC",
@@ -43,7 +36,6 @@
     "@user-office-software/duo-localisation": "^1.2.0",
     "@user-office-software/duo-logger": "^2.0.2",
     "@user-office-software/duo-message-broker": "^1.3.0",
-    "@user-office-software/duo-validation": "^3.1.9",
     "apollo-graphql": "^0.9.5",
     "apollo-server-core": "^3.6.3",
     "apollo-server-express": "^3.6.3",
@@ -116,14 +108,13 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-unused-imports": "^2.0.0",
     "faker": "5.5.3",
-    "husky": "^4.3.8",
     "jest": "^27.4.5",
-    "lint-staged": "^10.5.4",
     "newman": "^5.3.0",
     "prettier": "^2.5.1",
     "sinon": "^9.2.4",
     "ts-jest": "^27.1.2",
     "ts-node-dev": "^1.1.8",
+    "tsconfig-paths": "^4.0.0",
     "typescript": "^4.5.4"
   },
   "engines": {

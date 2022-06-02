@@ -1,4 +1,4 @@
-import { richTextInputQuestionValidationSchema } from '@user-office-software/duo-validation';
+import { richTextInputQuestionValidationSchema } from '@user-office-software-libs/validation';
 import sanitizeHtml, { IOptions } from 'sanitize-html';
 
 import {

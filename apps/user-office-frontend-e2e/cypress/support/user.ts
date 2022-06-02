@@ -10,7 +10,6 @@ import {
   UpdateUserRolesMutationVariables,
   User,
 } from '@user-office-software-libs/shared-types';
-
 import jwtDecode from 'jwt-decode';
 
 import { getE2EApi } from './utils';

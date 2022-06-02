@@ -8,7 +8,7 @@ import {
 import {
   createCallValidationSchemas,
   updateCallValidationSchemas,
-} from '@user-office-software/duo-validation/lib/Call';
+} from '@user-office-software-libs/validation';
 import { DateTime } from 'luxon';
 import PropTypes from 'prop-types';
 import React from 'react';
