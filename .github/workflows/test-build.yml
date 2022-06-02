@@ -115,12 +115,12 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-${{ env.cache-name }}-
 
+      - name: Install root dependencies
+        run: npm install
+
       - name: Install all dependencies
         if: ${{ (steps.frontend-cached-modules.outputs.cache-hit != 'true') && (steps.backend-cached-modules.outputs.cache-hit != 'true') }}
         run: npm run install:all
-
-      - name: Install root dependencies
-        run: npm install
 
       - name: Login to GitHub Packages Docker Registry
         uses: docker/login-action@v1
